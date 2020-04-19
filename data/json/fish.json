@@ -1,0 +1,749 @@
+{
+    "Bitterling": {
+        "name": "Bitterling",
+        "location": "River",
+        "size": "Smallest",
+        "price": 900,
+        "time": null,
+        "northenMonths": [{ "start": 10, "end": 2 }],
+        "southernMonths": [{ "start": 4, "end": 8 }]
+    },
+    "Pale Chub": {
+        "name": "Pale Chub",
+        "location": "River",
+        "size": "Smallest",
+        "price": 160,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Crucian Carp": {
+        "name": "Crucian Carp",
+        "location": "River",
+        "size": "Small",
+        "price": 160,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Dace": {
+        "name": "Dace",
+        "location": "River",
+        "size": "Medium",
+        "price": 240,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Carp": {
+        "name": "Carp",
+        "location": "Pond",
+        "size": "Large",
+        "price": 300,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Koi": {
+        "name": "Koi",
+        "location": "Pond",
+        "size": "Large",
+        "price": 4000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Goldfish": {
+        "name": "Goldfish",
+        "location": "Pond",
+        "size": "Smallest",
+        "price": 1300,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Pop-eyed Goldfish": {
+        "name": "Pop-eyed Goldfish",
+        "location": "Pond",
+        "size": "Smallest",
+        "price": 1300,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Ranchu Goldfish": {
+        "name": "Ranchu Goldfish",
+        "location": "Pond",
+        "size": "Small",
+        "price": 4500,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Killifish": {
+        "name": "Killifish",
+        "location": "Pond",
+        "size": "Smallest",
+        "price": 300,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 7 }],
+        "southernMonths": [{ "start": 9, "end": 1 }]
+    },
+    "Crawfish": {
+        "name": "Crawfish",
+        "location": "Pond",
+        "size": "Small",
+        "price": 200,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 8 }],
+        "southernMonths": [{ "start": 9, "end": 2 }]
+    },
+    "Soft-shelled Turtle": {
+        "name": "Soft-shelled Turtle",
+        "location": "River",
+        "size": "Large",
+        "price": 3750,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 7, "end": 8 }],
+        "southernMonths": [{ "start": 1, "end": 2 }]
+    },
+    "Snapping Turtle": {
+        "name": "Snapping Turtle",
+        "location": "River",
+        "size": "X Large",
+        "price": 5000,
+        "time": [{ "start": 21, "end": 4 }],
+        "northenMonths": [{ "start": 3, "end": 9 }],
+        "southernMonths": [{ "start": 9, "end": 3 }]
+    },
+    "Tadpole": {
+        "name": "Tadpole",
+        "location": "Pond",
+        "size": "Smallest",
+        "price": 100,
+        "time": null,
+        "northenMonths": [{ "start": 2, "end": 6 }],
+        "southernMonths": [{ "start": 8, "end": 0 }]
+    },
+    "Frog": {
+        "name": "Frog",
+        "location": "Pond",
+        "size": "Small",
+        "price": 120,
+        "time": null,
+        "northenMonths": [{ "start": 4, "end": 7 }],
+        "southernMonths": [{ "start": 10, "end": 1 }]
+    },
+    "Freshwater Goby": {
+        "name": "Freshwater Goby",
+        "location": "River",
+        "size": "Small",
+        "price": 400,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Loach": {
+        "name": "Loach",
+        "location": "River",
+        "size": "Small",
+        "price": 400,
+        "time": null,
+        "northenMonths": [{ "start": 2, "end": 4 }],
+        "southernMonths": [{ "start": 8, "end": 10 }]
+    },
+    "Catfish": {
+        "name": "Catfish",
+        "location": "Pond",
+        "size": "Large",
+        "price": 800,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 4, "end": 9 }],
+        "southernMonths": [{ "start": 10, "end": 3 }]
+    },
+    "Giant Snakehead": {
+        "name": "Giant Snakehead",
+        "location": "Pond",
+        "size": "X Large",
+        "price": 5500,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": [{ "start": 5, "end": 7 }],
+        "southernMonths": [{ "start": 11, "end": 1 }]
+    },
+    "Bluegill": {
+        "name": "Bluegill",
+        "location": "River",
+        "size": "Small",
+        "price": 180,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Yellow Perch": {
+        "name": "Yellow Perch",
+        "location": "River",
+        "size": "Medium",
+        "price": 300,
+        "time": null,
+        "northenMonths": [{ "start": 9, "end": 2 }],
+        "southernMonths": [{ "start": 3, "end": 8 }]
+    },
+    "Black Bass": {
+        "name": "Black Bass",
+        "location": "River",
+        "size": "Large",
+        "price": 400,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Tilapia": {
+        "name": "Tilapia",
+        "location": "River",
+        "size": "Medium",
+        "price": 800,
+        "time": null,
+        "northenMonths": [{ "start": 5, "end": 9 }],
+        "southernMonths": [{ "start": 11, "end": 3 }]
+    },
+    "Pike": {
+        "name": "Pike",
+        "location": "River",
+        "size": "X Large",
+        "price": 1800,
+        "time": null,
+        "northenMonths": [{ "start": 8, "end": 11 }],
+        "southernMonths": [{ "start": 2, "end": 5 }]
+    },
+    "Pond Smelt": {
+        "name": "Pond Smelt",
+        "location": "River",
+        "size": "Small",
+        "price": 500,
+        "time": null,
+        "northenMonths": [{ "start": 11, "end": 1 }],
+        "southernMonths": [{ "start": 5, "end": 7 }]
+    },
+    "Sweetfish": {
+        "name": "Sweetfish",
+        "location": "River",
+        "size": "Medium",
+        "price": 900,
+        "time": null,
+        "northenMonths": [{ "start": 6, "end": 8 }],
+        "southernMonths": [{ "start": 0, "end": 2 }]
+    },
+    "Cherry Salmon": {
+        "name": "Cherry Salmon",
+        "location": "River (Clifftop)",
+        "size": "Medium",
+        "price": 1000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [
+            { "start": 2, "end": 5 },
+            { "start": 8, "end": 10 }
+        ],
+        "southernMonths": [
+            { "start": 2, "end": 4 },
+            { "start": 8, "end": 11 }
+        ]
+    },
+    "Char": {
+        "name": "Char",
+        "location": "River (Clifftop)",
+        "size": "Medium",
+        "price": 3800,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [
+            { "start": 2, "end": 5 },
+            { "start": 8, "end": 10 }
+        ],
+        "southernMonths": [
+            { "start": 2, "end": 4 },
+            { "start": 8, "end": 11 }
+        ]
+    },
+    "Golden Trout": {
+        "name": "Golden Trout",
+        "location": "River (Clifftop)",
+        "size": "Medium",
+        "price": 15000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [
+            { "start": 2, "end": 5 },
+            { "start": 8, "end": 10 }
+        ],
+        "southernMonths": [
+            { "start": 2, "end": 4 },
+            { "start": 8, "end": 11 }
+        ]
+    },
+    "Stringfish": {
+        "name": "Stringfish",
+        "location": "River (Clifftop)",
+        "size": "Largest",
+        "price": 15000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 11, "end": 2 }],
+        "southernMonths": [{ "start": 5, "end": 8 }]
+    },
+    "Salmon": {
+        "name": "Salmon",
+        "location": "River (mouth)",
+        "size": "Large",
+        "price": 700,
+        "time": null,
+        "northenMonths": [{ "start": 8, "end": 8 }],
+        "southernMonths": [{ "start": 2, "end": 2 }]
+    },
+    "King Salmon": {
+        "name": "King Salmon",
+        "location": "River (mouth)",
+        "size": "Largest",
+        "price": 1800,
+        "time": null,
+        "northenMonths": [{ "start": 8, "end": 8 }],
+        "southernMonths": [{ "start": 2, "end": 2 }]
+    },
+    "Mitten Crab": {
+        "name": "Mitten Crab",
+        "location": "River",
+        "size": "Small",
+        "price": 2000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 8, "end": 10 }],
+        "southernMonths": [{ "start": 2, "end": 4 }]
+    },
+    "Guppy": {
+        "name": "Guppy",
+        "location": "River",
+        "size": "Smallest",
+        "price": 1300,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": [{ "start": 3, "end": 10 }],
+        "southernMonths": [{ "start": 9, "end": 4 }]
+    },
+    "Nibble Fish": {
+        "name": "Nibble Fish",
+        "location": "River",
+        "size": "Small",
+        "price": 1500,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": [{ "start": 4, "end": 8 }],
+        "southernMonths": [{ "start": 10, "end": 2 }]
+    },
+    "Angelfish": {
+        "name": "Angelfish",
+        "location": "River",
+        "size": "Small",
+        "price": 3000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 4, "end": 9 }],
+        "southernMonths": [{ "start": 10, "end": 3 }]
+    },
+    "Betta": {
+        "name": "Betta",
+        "location": "River",
+        "size": "Small",
+        "price": 2500,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": [{ "start": 4, "end": 9 }],
+        "southernMonths": [{ "start": 10, "end": 3 }]
+    },
+    "Neon Tetra": {
+        "name": "Neon Tetra",
+        "location": "River",
+        "size": "Smallest",
+        "price": 500,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": [{ "start": 3, "end": 10 }],
+        "southernMonths": [{ "start": 9, "end": 4 }]
+    },
+    "Rainbowfish": {
+        "name": "Rainbowfish",
+        "location": "River",
+        "size": "Small",
+        "price": 800,
+        "time": [{ "start": 9, "end": 16 }],
+        "northenMonths": [{ "start": 4, "end": 9 }],
+        "southernMonths": [{ "start": 10, "end": 3 }]
+    },
+    "Piranha": {
+        "name": "Piranha",
+        "location": "River",
+        "size": "Small",
+        "price": 2500,
+        "time": [
+            { "start": 9, "end": 16 },
+            { "start": 21, "end": 4 }
+        ],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Arowana": {
+        "name": "Arowana",
+        "location": "River",
+        "size": "Large",
+        "price": 10000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Dorado": {
+        "name": "Dorado",
+        "location": "River",
+        "size": "X Large",
+        "price": 15000,
+        "time": [{ "start": 4, "end": 21 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Gar": {
+        "name": "Gar",
+        "location": "Pond",
+        "size": "Largest",
+        "price": 6000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Arapaima": {
+        "name": "Arapaima",
+        "location": "River",
+        "size": "Largest",
+        "price": 10000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Saddled Bichir": {
+        "name": "Saddled Bichir",
+        "location": "River",
+        "size": "Large",
+        "price": 4000,
+        "time": [{ "start": 21, "end": 4 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Sturgeon": {
+        "name": "Sturgeon",
+        "location": "River (mouth)",
+        "size": "Largest",
+        "price": 10000,
+        "time": null,
+        "northenMonths": [{ "start": 8, "end": 2 }],
+        "southernMonths": [{ "start": 2, "end": 8 }]
+    },
+    "Sea Butterfly": {
+        "name": "Sea Butterfly",
+        "location": "Sea",
+        "size": "Smallest",
+        "price": 1000,
+        "time": null,
+        "northenMonths": [{ "start": 11, "end": 2 }],
+        "southernMonths": [{ "start": 5, "end": 8 }]
+    },
+    "Sea Horse": {
+        "name": "Sea Horse",
+        "location": "Sea",
+        "size": "Smallest",
+        "price": 1100,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 10 }],
+        "southernMonths": [{ "start": 9, "end": 4 }]
+    },
+    "Clown Fish": {
+        "name": "Clown Fish",
+        "location": "Sea",
+        "size": "Smallest",
+        "price": 650,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 8 }],
+        "southernMonths": [{ "start": 9, "end": 2 }]
+    },
+    "Surgeonfish": {
+        "name": "Surgeonfish",
+        "location": "Sea",
+        "size": "Small",
+        "price": 1000,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 8 }],
+        "southernMonths": [{ "start": 9, "end": 2 }]
+    },
+    "Butterfly Fish": {
+        "name": "Butterfly Fish",
+        "location": "Sea",
+        "size": "Small",
+        "price": 1000,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 8 }],
+        "southernMonths": [{ "start": 9, "end": 2 }]
+    },
+    "Napoleonfish": {
+        "name": "Napoleonfish",
+        "location": "Sea",
+        "size": "Largest",
+        "price": 10000,
+        "time": [{ "start": 4, "end": 21 }],
+        "northenMonths": [{ "start": 6, "end": 7 }],
+        "southernMonths": [{ "start": 0, "end": 1 }]
+    },
+    "Zebra Turkeyfish": {
+        "name": "Zebra Turkeyfish",
+        "location": "Sea",
+        "size": "Medium",
+        "price": 500,
+        "time": null,
+        "northenMonths": [{ "start": 3, "end": 10 }],
+        "southernMonths": [{ "start": 9, "end": 4 }]
+    },
+    "Blowfish": {
+        "name": "Blowfish",
+        "location": "Sea",
+        "size": "Medium",
+        "price": 5000,
+        "time": [{ "start": 18, "end": 4 }],
+        "northenMonths": [{ "start": 10, "end": 1 }],
+        "southernMonths": [{ "start": 4, "end": 7 }]
+    },
+    "Puffer Fish": {
+        "name": "Puffer Fish",
+        "location": "Sea",
+        "size": "Medium",
+        "price": 250,
+        "time": null,
+        "northenMonths": [{ "start": 6, "end": 8 }],
+        "southernMonths": [{ "start": 0, "end": 2 }]
+    },
+    "Anchovy": {
+        "name": "Anchovy",
+        "location": "Sea",
+        "size": "Small",
+        "price": 200,
+        "time": [{ "start": 4, "end": 21 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Horse Mackerel": {
+        "name": "Horse Mackerel",
+        "location": "Sea",
+        "size": "Small",
+        "price": 150,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Barred Knifejaw": {
+        "name": "Barred Knifejaw",
+        "location": "Sea",
+        "size": "Medium",
+        "price": 5000,
+        "time": null,
+        "northenMonths": [{ "start": 2, "end": 10 }],
+        "southernMonths": [{ "start": 8, "end": 4 }]
+    },
+    "Sea Bass": {
+        "name": "Sea Bass",
+        "location": "Sea",
+        "size": "X Large",
+        "price": 400,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Red Snapper": {
+        "name": "Red Snapper",
+        "location": "Sea",
+        "size": "Large",
+        "price": 3000,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Dab": {
+        "name": "Dab",
+        "location": "Sea",
+        "size": "Medium",
+        "price": 300,
+        "time": null,
+        "northenMonths": [{ "start": 9, "end": 3 }],
+        "southernMonths": [{ "start": 3, "end": 9 }]
+    },
+    "Olive Flounder": {
+        "name": "Olive Flounder",
+        "location": "Sea",
+        "size": "Large",
+        "price": 800,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Squid": {
+        "name": "Squid",
+        "location": "Sea",
+        "size": "Medium",
+        "price": 500,
+        "time": null,
+        "northenMonths": [{ "start": 11, "end": 7 }],
+        "southernMonths": [{ "start": 5, "end": 1 }]
+    },
+    "Moray Eel": {
+        "name": "Moray Eel",
+        "location": "Sea",
+        "size": "Narrow",
+        "price": 2000,
+        "time": null,
+        "northenMonths": [{ "start": 7, "end": 9 }],
+        "southernMonths": [{ "start": 1, "end": 3 }]
+    },
+    "Ribbon Eel": {
+        "name": "Ribbon Eel",
+        "location": "Sea",
+        "size": "Narrow",
+        "price": 600,
+        "time": null,
+        "northenMonths": [{ "start": 5, "end": 9 }],
+        "southernMonths": [{ "start": 11, "end": 3 }]
+    },
+    "Tuna": {
+        "name": "Tuna",
+        "location": "Pier",
+        "size": "Largest",
+        "price": 7000,
+        "time": null,
+        "northenMonths": [{ "start": 10, "end": 3 }],
+        "southernMonths": [{ "start": 4, "end": 9 }]
+    },
+    "Blue Marlin": {
+        "name": "Blue Marlin",
+        "location": "Pier",
+        "size": "Largest",
+        "price": 10000,
+        "time": null,
+        "northenMonths": [
+            { "start": 6, "end": 8 },
+            { "start": 10, "end": 3 }
+        ],
+        "southernMonths": [
+            { "start": 0, "end": 2 },
+            { "start": 4, "end": 10 }
+        ]
+    },
+    "Giant Trevally": {
+        "name": "Giant Trevally",
+        "location": "Pier",
+        "size": "Large",
+        "price": 4500,
+        "time": null,
+        "northenMonths": [{ "start": 4, "end": 9 }],
+        "southernMonths": [{ "start": 10, "end": 3 }]
+    },
+    "Mahi-mahi": {
+        "name": "Mahi-mahi",
+        "location": "Sea",
+        "size": "Large",
+        "price": 6000,
+        "time": null,
+        "northenMonths": [{ "start": 4, "end": 9 }],
+        "southernMonths": [{ "start": 10, "end": 3 }]
+    },
+    "Ocean Sunfish": {
+        "name": "Ocean Sunfish",
+        "location": "Sea",
+        "size": "Largest (Fin)",
+        "price": 4000,
+        "time": [{ "start": 4, "end": 21 }],
+        "northenMonths": [{ "start": 6, "end": 8 }],
+        "southernMonths": [{ "start": 0, "end": 2 }]
+    },
+    "Ray": {
+        "name": "Ray",
+        "location": "Sea",
+        "size": "X Large",
+        "price": 3000,
+        "time": [{ "start": 4, "end": 21 }],
+        "northenMonths": [{ "start": 7, "end": 10 }],
+        "southernMonths": [{ "start": 1, "end": 4 }]
+    },
+    "Saw Shark": {
+        "name": "Saw Shark",
+        "location": "Sea",
+        "size": "Largest (Fin)",
+        "price": 12000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Hammerhead Shark": {
+        "name": "Hammerhead Shark",
+        "location": "Sea",
+        "size": "Largest (Fin)",
+        "price": 8000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Great White Shark": {
+        "name": "Great White Shark",
+        "location": "Sea",
+        "size": "Largest (Fin)",
+        "price": 15000,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Whale Shark": {
+        "name": "Whale Shark",
+        "location": "Sea",
+        "size": "Largest (Fin)",
+        "price": 13000,
+        "time": null,
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Suckerfish": {
+        "name": "Suckerfish",
+        "location": "Sea",
+        "size": "Large (Fin)",
+        "price": 1500,
+        "time": null,
+        "northenMonths": [{ "start": 5, "end": 8 }],
+        "southernMonths": [{ "start": 11, "end": 2 }]
+    },
+    "Football Fish": {
+        "name": "Football Fish",
+        "location": "Sea",
+        "size": "Large",
+        "price": 2500,
+        "time": [{ "start": 16, "end": 9 }],
+        "northenMonths": [{ "start": 10, "end": 2 }],
+        "southernMonths": [{ "start": 4, "end": 8 }]
+    },
+    "Oarfish": {
+        "name": "Oarfish",
+        "location": "Sea",
+        "size": "Largest",
+        "price": 9000,
+        "time": null,
+        "northenMonths": [{ "start": 11, "end": 4 }],
+        "southernMonths": [{ "start": 5, "end": 10 }]
+    },
+    "Barreleye": {
+        "name": "Barreleye",
+        "location": "Sea",
+        "size": "Small",
+        "price": 15000,
+        "time": [{ "start": 21, "end": 4 }],
+        "northenMonths": null,
+        "southernMonths": null
+    },
+    "Coelacanth": {
+        "name": "Coelacanth",
+        "location": "Sea (rainy days)",
+        "size": "Largest",
+        "price": 15000,
+        "time": null,
+        "northenMonths": null,
+        "southernMonths": null
+    }
+}

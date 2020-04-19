@@ -1,0 +1,74 @@
+{
+  "name": "animal-crossing-guide",
+  "private": true,
+  "description": "Guide to all things animal crossing",
+  "version": "0.1.0",
+  "author": "John Jiang <johnjiang101@gmail.com>",
+  "dependencies": {
+    "antd": "^4.1.4",
+    "gatsby": "^2.20.25",
+    "gatsby-image": "^2.3.4",
+    "gatsby-plugin-manifest": "^2.3.5",
+    "gatsby-plugin-offline": "^3.1.4",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-typescript": "^2.3.3",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-sharp": "^2.4.6",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.0.0",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/numeral": "0.0.26",
+    "@types/react-helmet": "^5.0.15",
+    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "babel-jest": "^25.3.0",
+    "babel-preset-gatsby": "^0.3.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "husky": "^4.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.3.0",
+    "lint-staged": "^10.1.2",
+    "prettier": "2.0.4",
+    "tslint-react": "^4.2.0",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,css,md}": "prettier --write"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
