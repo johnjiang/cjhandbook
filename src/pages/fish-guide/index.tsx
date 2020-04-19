@@ -117,7 +117,6 @@ export default function FishGuide({
             <Column
                 title="Name"
                 dataIndex="name"
-                key="name"
                 sorter={(a: FishData, b: FishData): number =>
                     a.name.localeCompare(b.name)
                 }
@@ -125,7 +124,6 @@ export default function FishGuide({
             <Column
                 title="Location"
                 dataIndex="location"
-                key="location"
                 filters={[
                     { text: "River", value: "River" },
                     { text: "Pond", value: "Pond" },
@@ -139,7 +137,6 @@ export default function FishGuide({
             <Column
                 title="Size"
                 dataIndex="size"
-                key="size"
                 filters={[
                     { text: "Narow", value: "Narrow" },
                     { text: "Smallest", value: "Smallest" },
@@ -156,7 +153,6 @@ export default function FishGuide({
                 title="Price"
                 dataIndex="price"
                 align="right"
-                key="price"
                 sorter={(a: FishData, b: FishData): number => a.price - b.price}
                 render={(value): ReactElement => {
                     return <span>{numeral(value).format("0,0")}</span>;
@@ -196,7 +192,6 @@ export default function FishGuide({
                         ? "northenMonths"
                         : "southernMonths"
                 }
-                key="month"
                 render={(
                     ranges: MonthRange[] | null,
                 ): ReactElement | ReactElement[] => {
@@ -222,7 +217,7 @@ export default function FishGuide({
             />
             <Column
                 title={"Status"}
-                key="isAvailable"
+                key="status"
                 render={(value, record: FishData): ReactElement => {
                     if (isFishAvailable(record, hemisphere)) {
                         return <Tag color="green">AVAILABLE</Tag>;
