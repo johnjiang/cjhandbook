@@ -113,7 +113,7 @@ export default function FishGuide({
     }
 
     return (
-        <Table dataSource={dataSource} pagination={false}>
+        <Table dataSource={dataSource} pagination={false} rowKey="name">
             <Column
                 title="Name"
                 dataIndex="name"
