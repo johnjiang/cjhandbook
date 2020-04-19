@@ -5,6 +5,7 @@ import numeral from "numeral";
 import fishData from "../../../data/json/fish.json";
 import styled from "styled-components";
 import { isInMonthRange, isInTimeRange } from "../../helpers/date-helper";
+import isEmpty from "lodash/isEmpty";
 
 const { Column } = Table;
 
@@ -100,6 +101,7 @@ interface Props {
     showCaughtFish?: boolean;
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
+    searchFilter?: string;
 }
 
 export default function FishTable({
@@ -108,6 +110,7 @@ export default function FishTable({
     hemisphere,
     caughtFish,
     onCaughtFishChange,
+    searchFilter,
 }: Props): ReactElement {
     let dataSource: FishData[] = Object.values(fishData);
 
@@ -120,6 +123,12 @@ export default function FishTable({
     if (!showCaughtFish) {
         dataSource = dataSource.filter((data) => {
             return !caughtFish[data.name];
+        });
+    }
+
+    if (searchFilter && !isEmpty(searchFilter)) {
+        dataSource = dataSource.filter((data) => {
+            return data.name.toLowerCase().includes(searchFilter.toLowerCase());
         });
     }
 
