@@ -109,17 +109,16 @@ export default function FishGuide({
     caughtFish,
     onCaughtFishChange,
 }: Props): ReactElement {
-    const fish: FishData[] = Object.values(fishData);
-    let dataSource = fish;
+    let dataSource: FishData[] = Object.values(fishData);
 
     if (isRealTime) {
-        dataSource = fish.filter((data) => {
+        dataSource = dataSource.filter((data) => {
             return isFishAvailable(data, hemisphere);
         });
     }
 
     if (!showCaughtFish) {
-        dataSource = fish.filter((data) => {
+        dataSource = dataSource.filter((data) => {
             return !caughtFish[data.name];
         });
     }

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import SEO from "../components/seo";
 import HeaderMenu from "./menu";
 import FishGuide, { Hemisphere } from "./fish-guide";
-import RealTimeToggle from "./fish-guide/real-time-toggle";
+import HideUnavailableToggle from "./fish-guide/hide-unavailable-toggle";
 import useLocalStorage from "../helpers/use-local-storage";
 import CaughtFishToggle from "./fish-guide/caught-fish-toggle";
 
@@ -58,7 +58,7 @@ export default function IndexPage(): ReactElement {
                             </Option>
                         </Select>
 
-                        <RealTimeToggle
+                        <HideUnavailableToggle
                             onChange={(val): void => setRealTime(val)}
                         />
 
