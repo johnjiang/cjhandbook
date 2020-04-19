@@ -253,6 +253,7 @@ export default function FishTable({
             <Column
                 title={"Status"}
                 key="status"
+                align="center"
                 render={(value, record: FishData): ReactElement => {
                     if (isFishAvailable(record, hemisphere)) {
                         return <Tag color="green">AVAILABLE</Tag>;
