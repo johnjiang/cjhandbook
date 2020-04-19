@@ -3,11 +3,12 @@ import { isInMonthRange, isInTimeRange } from "./date-helper";
 describe("date-helper", () => {
     describe("isInTimeRange", () => {
         const twoAm = new Date(2020, 3, 1, 12);
-        const twelvePm = new Date(2020, 3, 1, 12);
+        const twelvePm = new Date(2020, 3, 1, 12, 5);
 
         it.each`
             time        | start | end   | expected
-            ${twelvePm} | ${4}  | ${12} | ${true}
+            ${twelvePm} | ${4}  | ${13} | ${true}
+            ${twelvePm} | ${4}  | ${12} | ${false}
             ${twelvePm} | ${4}  | ${9}  | ${false}
             ${twoAm}    | ${23} | ${3}  | ${false}
         `("returns expected", ({ time, start, end, expected }) => {

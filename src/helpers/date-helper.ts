@@ -1,15 +1,9 @@
-import {
-    addDays,
-    addYears,
-    isWithinInterval,
-    setHours,
-    setMonth,
-} from "date-fns";
+import { addDays, addYears, isWithinInterval, set, setMonth } from "date-fns";
 import { MonthRange, TimeRange } from "../pages/fish-guide/fish-table";
 
 export function isInTimeRange(time: Date, interval: TimeRange): boolean {
-    let start = setHours(time, interval.start);
-    const end = setHours(time, interval.end);
+    let start = set(time, { hours: interval.start, minutes: 0 });
+    const end = set(time, { hours: interval.end, minutes: 0 });
     // e.g. start: 9pm end: 4am, so we need to set start to be the day before
     if (interval.end < interval.start) {
         start = addDays(start, -1);
