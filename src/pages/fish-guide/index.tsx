@@ -71,7 +71,7 @@ export default function FishGuide(): ReactElement {
 
                 <ProgressContainer>
                     <Progress
-                        percent={(totalCaught / 80) * 100}
+                        percent={Math.ceil((totalCaught / 80) * 100)}
                         status="active"
                     />
                 </ProgressContainer>
