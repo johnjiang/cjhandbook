@@ -1,7 +1,10 @@
 import React, { ReactElement } from "react";
 import { Layout } from "antd";
 import { MemoryRouter as Router, Route, Switch } from "react-router-dom";
+import ReactGA from "react-ga";
 import "antd/dist/antd.css";
+
+ReactGA.initialize("UA-164017649-1");
 
 import FishGuide from "./pages/fish-guide";
 
