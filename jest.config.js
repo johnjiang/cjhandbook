@@ -1,24 +1,11 @@
-const path = require("path");
-
 module.exports = {
+    bail: true,
+    verbose: true,
     transform: {
-        // "^.+\\.(tsx?|jsx?)$": "ts-jest",
-        "^.+\\.(tsx?|jsx?)$": `<rootDir>/jest-configs/jest-preprocess.js`,
+        "^.+\\.(j|t)sx?$": "ts-jest",
     },
-    moduleNameMapper: {
-        // "\\.svg": `./jest-configs/__mocks__/file-mocks.js`,
-        "\\.svg": `<rootDir>/jest-configs/__mocks__/svgTransform.js`,
-        "typeface-*": "identity-obj-proxy",
-        ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
-        ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/jest-configs/__mocks__/file-mocks.js`,
-    },
-    testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
-    transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`, `\\.svg`],
+    setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
     globals: {
-        __PATH_PREFIX__: ``,
+        VERSION: "FAKE_VERSION",
     },
-    testRegex: "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    moduleFileExtensions: ["ts", "tsx", "js"],
-    collectCoverage: false,
-    coverageReporters: ["lcov", "text", "html"],
 };

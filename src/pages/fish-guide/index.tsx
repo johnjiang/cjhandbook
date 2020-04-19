@@ -1,260 +1,71 @@
-import React, { ReactElement } from "react";
-import { Checkbox, Table, Tag } from "antd";
-import numeral from "numeral";
-
-import fishData from "../../../data/json/fish.json";
+import React, { ReactElement, useState } from "react";
+import { Select, Space } from "antd";
 import styled from "styled-components";
-import { isInMonthRange, isInTimeRange } from "../../helpers/date-helper";
+import "antd/es/date-picker/style/css";
+import FishTable, { Hemisphere } from "./fish-table";
+import useLocalStorage from "../../helpers/use-local-storage";
+import HideUnavailableToggle from "./hide-unavailable-toggle";
+import CaughtFishToggle from "./caught-fish-toggle";
 
-const { Column } = Table;
+const { Option } = Select;
 
-export enum Hemisphere {
-    NORTHEN = "NORTHERN",
-    SOUTHERN = "SOUTHERN",
-}
-
-const MONTHS = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-];
-
-function hoursToString(hours: number): string {
-    if (hours === 0) {
-        return "12am";
-    } else if (hours <= 12) {
-        return `${hours}am`;
-    } else {
-        return `${hours - 12}pm`;
-    }
-}
-
-const RangeContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+const ContentContainer = styled.div`
+    background: #fff;
+    padding: 24px;
+    min-height: 800px;
 `;
 
-export interface MonthRange {
-    start: number;
-    end: number;
-}
+const ToolbarContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+`;
 
-export interface TimeRange {
-    start: number;
-    end: number;
-}
+export default function FishGuide(): ReactElement {
+    const [hemisphere, setHemisphere] = useState(Hemisphere.NORTHEN);
+    const [isRealTime, setRealTime] = useState(false);
+    const [showCaughtFish, setShowCaughtFish] = useState(true);
+    const [caughtFish, setCaughtFish] = useLocalStorage("caughtFish", {});
 
-interface FishData {
-    name: string;
-    location: string;
-    size: string;
-    price: number;
-    time: TimeRange[] | null;
-    northenMonths: MonthRange[] | null;
-    southernMonths: MonthRange[] | null;
-}
-
-function isFishAvailable(data: FishData, hemisphere: Hemisphere): boolean {
-    if (data.time) {
-        const inTimeRange = data.time.some((interval) => {
-            return isInTimeRange(new Date(), interval);
-        });
-
-        if (!inTimeRange) {
-            return false;
-        }
-    }
-
-    let monthIntervals;
-    if (hemisphere === Hemisphere.NORTHEN) {
-        monthIntervals = data.northenMonths;
-    } else {
-        monthIntervals = data.southernMonths;
-    }
-
-    if (monthIntervals) {
-        const inMonthRange = monthIntervals.some((interval) => {
-            return isInMonthRange(new Date(), interval);
-        });
-
-        if (!inMonthRange) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-interface Props {
-    hemisphere: Hemisphere;
-    isRealTime: boolean;
-    showCaughtFish?: boolean;
-    caughtFish: Record<string, boolean>;
-    onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
-}
-
-export default function FishGuide({
-    isRealTime,
-    showCaughtFish = true,
-    hemisphere,
-    caughtFish,
-    onCaughtFishChange,
-}: Props): ReactElement {
-    let dataSource: FishData[] = Object.values(fishData);
-
-    if (isRealTime) {
-        dataSource = dataSource.filter((data) => {
-            return isFishAvailable(data, hemisphere);
-        });
-    }
-
-    if (!showCaughtFish) {
-        dataSource = dataSource.filter((data) => {
-            return !caughtFish[data.name];
-        });
+    function onCaughtFishChange(fishName: string, isCaught: boolean): void {
+        const newCaughtFish = {
+            ...caughtFish,
+            [fishName]: isCaught,
+        };
+        setCaughtFish(newCaughtFish);
     }
 
     return (
-        <Table dataSource={dataSource} pagination={false} rowKey="name">
-            <Column
-                title="Caught"
-                dataIndex="name"
-                key="caught"
-                align="center"
-                render={(name: string): ReactElement => {
-                    return (
-                        <span>
-                            <Checkbox
-                                value={name}
-                                checked={caughtFish[name]}
-                                onChange={(e): void => {
-                                    onCaughtFishChange(name, e.target.checked);
-                                }}
-                            />
-                        </span>
-                    );
-                }}
-            />
-            <Column
-                title="Name"
-                dataIndex="name"
-                sorter={(a: FishData, b: FishData): number =>
-                    a.name.localeCompare(b.name)
-                }
-            />
-            <Column
-                title="Location"
-                dataIndex="location"
-                filters={[
-                    { text: "River", value: "River" },
-                    { text: "Pond", value: "Pond" },
-                    { text: "Sea", value: "Sea" },
-                ]}
-                onFilter={(value, record: FishData): boolean =>
-                    record.location.includes(String(value))
-                }
-                sorter={(a, b): number => a.location.localeCompare(b.location)}
-            />
-            <Column
-                title="Size"
-                dataIndex="size"
-                filters={[
-                    { text: "Narow", value: "Narrow" },
-                    { text: "Smallest", value: "Smallest" },
-                    { text: "Small", value: "Small" },
-                    { text: "Medium", value: "Medium" },
-                    { text: "Large", value: "Large" },
-                    { text: "X-Large", value: "X Large" },
-                ]}
-                onFilter={(value, record: FishData): boolean =>
-                    record.size === value
-                }
-            />
-            <Column
-                title="Price"
-                dataIndex="price"
-                align="right"
-                sorter={(a: FishData, b: FishData): number => a.price - b.price}
-                render={(value): ReactElement => {
-                    return <span>{numeral(value).format("0,0")}</span>;
-                }}
-            />
-            <Column
-                title="Time"
-                dataIndex="time"
-                key="time"
-                render={(
-                    ranges: TimeRange[] | null,
-                ): ReactElement | ReactElement[] => {
-                    if (!ranges) {
-                        return <span>All day</span>;
-                    }
+        <ContentContainer>
+            <ToolbarContainer>
+                <Space>
+                    <Select
+                        defaultValue={Hemisphere.NORTHEN}
+                        style={{ width: 120 }}
+                        onChange={(data): void => setHemisphere(data)}
+                    >
+                        <Option value={Hemisphere.NORTHEN}>Northern</Option>
+                        <Option value={Hemisphere.SOUTHERN}>Southern</Option>
+                    </Select>
 
-                    return (
-                        <RangeContainer>
-                            {ranges.map(
-                                (range, index): ReactElement => {
-                                    return (
-                                        <span key={index}>
-                                            {hoursToString(range.start)} -{" "}
-                                            {hoursToString(range.end)}
-                                        </span>
-                                    );
-                                },
-                            )}
-                        </RangeContainer>
-                    );
-                }}
-            />
-            <Column
-                title="Month"
-                dataIndex={
-                    hemisphere === Hemisphere.NORTHEN
-                        ? "northenMonths"
-                        : "southernMonths"
-                }
-                render={(
-                    ranges: MonthRange[] | null,
-                ): ReactElement | ReactElement[] => {
-                    if (!ranges) {
-                        return <span>Year-round</span>;
-                    }
+                    <HideUnavailableToggle
+                        onChange={(val): void => setRealTime(val)}
+                    />
 
-                    return (
-                        <RangeContainer>
-                            {ranges.map(
-                                (range, index): ReactElement => {
-                                    return (
-                                        <span key={index}>
-                                            {MONTHS[range.start]} -{" "}
-                                            {MONTHS[range.end]}
-                                        </span>
-                                    );
-                                },
-                            )}
-                        </RangeContainer>
-                    );
-                }}
+                    <CaughtFishToggle
+                        checked={showCaughtFish}
+                        onChange={(val): void => setShowCaughtFish(val)}
+                    />
+                </Space>
+            </ToolbarContainer>
+
+            <FishTable
+                hemisphere={hemisphere}
+                isRealTime={isRealTime}
+                caughtFish={caughtFish}
+                showCaughtFish={showCaughtFish}
+                onCaughtFishChange={onCaughtFishChange}
             />
-            <Column
-                title={"Status"}
-                key="status"
-                render={(value, record: FishData): ReactElement => {
-                    if (isFishAvailable(record, hemisphere)) {
-                        return <Tag color="green">AVAILABLE</Tag>;
-                    }
-                    return <Tag color="red">UNAVAILABLE</Tag>;
-                }}
-            />
-        </Table>
+        </ContentContainer>
     );
 }

@@ -5,7 +5,7 @@ import {
     setHours,
     setMonth,
 } from "date-fns";
-import { MonthRange, TimeRange } from "../pages/fish-guide";
+import { MonthRange, TimeRange } from "../pages/fish-guide/fish-table";
 
 export function isInTimeRange(time: Date, interval: TimeRange): boolean {
     let start = setHours(time, interval.start);
