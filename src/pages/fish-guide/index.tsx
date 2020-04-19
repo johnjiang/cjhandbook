@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Table, Tag } from "antd";
+import { Checkbox, Table, Tag } from "antd";
 import numeral from "numeral";
 
 import fishData from "../../../data/json/fish.json";
@@ -63,11 +63,6 @@ interface FishData {
     southernMonths: MonthRange[] | null;
 }
 
-interface Props {
-    hemisphere: Hemisphere;
-    isRealTime: boolean;
-}
-
 function isFishAvailable(data: FishData, hemisphere: Hemisphere): boolean {
     if (data.time) {
         const inTimeRange = data.time.some((interval) => {
@@ -99,9 +94,20 @@ function isFishAvailable(data: FishData, hemisphere: Hemisphere): boolean {
     return true;
 }
 
+interface Props {
+    hemisphere: Hemisphere;
+    isRealTime: boolean;
+    showCaughtFish?: boolean;
+    caughtFish: Record<string, boolean>;
+    onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
+}
+
 export default function FishGuide({
     isRealTime,
+    showCaughtFish = true,
     hemisphere,
+    caughtFish,
+    onCaughtFishChange,
 }: Props): ReactElement {
     const fish: FishData[] = Object.values(fishData);
     let dataSource = fish;
@@ -112,8 +118,33 @@ export default function FishGuide({
         });
     }
 
+    if (!showCaughtFish) {
+        dataSource = fish.filter((data) => {
+            return !caughtFish[data.name];
+        });
+    }
+
     return (
         <Table dataSource={dataSource} pagination={false} rowKey="name">
+            <Column
+                title="Caught"
+                dataIndex="name"
+                key="caught"
+                align="center"
+                render={(name: string): ReactElement => {
+                    return (
+                        <span>
+                            <Checkbox
+                                value={name}
+                                checked={caughtFish[name]}
+                                onChange={(e): void => {
+                                    onCaughtFishChange(name, e.target.checked);
+                                }}
+                            />
+                        </span>
+                    );
+                }}
+            />
             <Column
                 title="Name"
                 dataIndex="name"
