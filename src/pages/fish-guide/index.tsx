@@ -114,7 +114,14 @@ export default function FishGuide({
 
     return (
         <Table dataSource={dataSource} pagination={false}>
-            <Column title="Name" dataIndex="name" key="name" />
+            <Column
+                title="Name"
+                dataIndex="name"
+                key="name"
+                sorter={(a: FishData, b: FishData): number =>
+                    a.name.localeCompare(b.name)
+                }
+            />
             <Column
                 title="Location"
                 dataIndex="location"
