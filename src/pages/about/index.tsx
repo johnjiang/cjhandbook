@@ -13,8 +13,8 @@ export default function AboutPage(): ReactElement {
                 >
                     John Jiang <TwitterOutlined />
                 </a>
-                , for those that are stuck inside where the only solace is to
-                catch more sea bass.
+                , for those that are stuck inside but can find their solace in
+                Animal Crossing.
             </p>
             <p>
                 DM me regarding bugs, feedback, or even if you just want to say
