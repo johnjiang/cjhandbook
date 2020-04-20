@@ -9,5 +9,6 @@ ReactGA.initialize("UA-164017649-1", {
         siteSpeedSampleRate: 100,
     },
 });
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(<App />, document.getElementById("app"));
