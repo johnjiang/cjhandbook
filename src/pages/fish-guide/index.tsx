@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Select } from "antd";
+import { Select, Space } from "antd";
 import styled from "styled-components";
 import Media from "react-media";
 import "antd/es/date-picker/style/css";
@@ -12,6 +12,7 @@ import CaughtFishToggle from "./caught-fish-toggle";
 import SearchInput from "./search-input";
 import FishCards from "./fish-cards";
 import isEmpty from "lodash/isEmpty";
+import { MEDIA_QUERY } from "../../helpers/media";
 
 const { Option } = Select;
 
@@ -20,13 +21,6 @@ const ToolbarContainer = styled.div`
     flex-direction: row;
     padding-bottom: 10px;
     align-items: center;
-
-    @media (max-width: 599px) {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        height: 150px;
-    }
 `;
 
 const SearchContainer = styled.div`
@@ -87,32 +81,52 @@ export default function FishGuide(): ReactElement {
     return (
         <>
             <ToolbarContainer>
-                <SearchContainer>
-                    <SearchInput
-                        query={searchFilter}
-                        onChange={setSearchFilter}
-                    />
-                </SearchContainer>
-                <Select
-                    defaultValue={hemisphere}
-                    style={{ width: 120 }}
-                    onChange={(data): void => setHemisphere(data)}
-                >
-                    <Option value={Hemisphere.NORTHEN}>Northern</Option>
-                    <Option value={Hemisphere.SOUTHERN}>Southern</Option>
-                </Select>
+                <Media query={MEDIA_QUERY}>
+                    {(matches): ReactElement => {
+                        return (
+                            <Space
+                                direction={matches ? "vertical" : "horizontal"}
+                            >
+                                <SearchContainer>
+                                    <SearchInput
+                                        query={searchFilter}
+                                        onChange={setSearchFilter}
+                                    />
+                                </SearchContainer>
+                                <Select
+                                    defaultValue={hemisphere}
+                                    style={{ width: 120 }}
+                                    onChange={(data): void =>
+                                        setHemisphere(data)
+                                    }
+                                >
+                                    <Option value={Hemisphere.NORTHEN}>
+                                        Northern
+                                    </Option>
+                                    <Option value={Hemisphere.SOUTHERN}>
+                                        Southern
+                                    </Option>
+                                </Select>
 
-                <HideUnavailableToggle
-                    checked={hideUnavailable}
-                    onChange={(val): void => setHideUnavailable(val)}
-                />
+                                <HideUnavailableToggle
+                                    checked={hideUnavailable}
+                                    onChange={(val): void =>
+                                        setHideUnavailable(val)
+                                    }
+                                />
 
-                <CaughtFishToggle
-                    checked={hideCaughtFish}
-                    onChange={(val): void => setShowCaughtFish(val)}
-                />
+                                <CaughtFishToggle
+                                    checked={hideCaughtFish}
+                                    onChange={(val): void =>
+                                        setShowCaughtFish(val)
+                                    }
+                                />
+                            </Space>
+                        );
+                    }}
+                </Media>
             </ToolbarContainer>
-            <Media query="(max-width: 599px)">
+            <Media query={MEDIA_QUERY}>
                 {(matches): ReactElement => {
                     if (matches) {
                         return (

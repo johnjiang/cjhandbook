@@ -9,6 +9,7 @@ import HeaderMenu from "./pages/menu";
 import styled from "styled-components";
 import AboutPage from "./pages/about";
 import FooterContent from "./pages/footer-content";
+import { MEDIA_QUERY } from "./helpers/media";
 
 const { Content, Footer, Header } = Layout;
 
@@ -26,7 +27,7 @@ export default function App(): ReactElement {
                     <HeaderMenu />
                 </Header>
                 <Layout>
-                    <Media query="(max-width: 599px)">
+                    <Media query={MEDIA_QUERY}>
                         {(matches): ReactElement => {
                             const style: Record<string, string> = {
                                 background: "#fff",
