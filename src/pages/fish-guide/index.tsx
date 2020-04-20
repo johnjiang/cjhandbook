@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import { Progress, Select, Space } from "antd";
 import styled from "styled-components";
 import Media from "react-media";
@@ -32,11 +32,21 @@ const ToolbarContainer = styled.div`
 `;
 
 export default function FishGuide(): ReactElement {
-    const [hemisphere, setHemisphere] = useState(Hemisphere.NORTHEN);
-    const [isRealTime, setRealTime] = useState(false);
-    const [showCaughtFish, setShowCaughtFish] = useState(true);
+    const [hemisphere, setHemisphere] = useLocalStorage(
+        "hemisphere",
+        Hemisphere.NORTHEN,
+    );
+    const [hideUnavailable, setHideUnavailable] = useLocalStorage(
+        "hideUnavailable",
+        false,
+    );
+    const [showCaughtFish, setShowCaughtFish] = useLocalStorage(
+        "showCaughtFish",
+        true,
+    );
+    const [searchFilter, setSearchFilter] = useLocalStorage("fishSearch", "");
+
     const [caughtFish, setCaughtFish] = useLocalStorage("caughtFish", {});
-    const [searchFilter, setSearchFilter] = useState("");
 
     function onCaughtFishChange(fishName: string, isCaught: boolean): void {
         const newCaughtFish = {
@@ -54,7 +64,7 @@ export default function FishGuide(): ReactElement {
                 <Space>
                     <SearchInput onChange={setSearchFilter} />
                     <Select
-                        defaultValue={Hemisphere.NORTHEN}
+                        defaultValue={hemisphere}
                         style={{ width: 120 }}
                         onChange={(data): void => setHemisphere(data)}
                     >
@@ -63,7 +73,8 @@ export default function FishGuide(): ReactElement {
                     </Select>
 
                     <HideUnavailableToggle
-                        onChange={(val): void => setRealTime(val)}
+                        checked={hideUnavailable}
+                        onChange={(val): void => setHideUnavailable(val)}
                     />
 
                     <CaughtFishToggle
@@ -85,7 +96,7 @@ export default function FishGuide(): ReactElement {
                         return (
                             <FishCards
                                 hemisphere={hemisphere}
-                                isRealTime={isRealTime}
+                                isRealTime={hideUnavailable}
                                 caughtFish={caughtFish}
                                 showCaughtFish={showCaughtFish}
                                 onCaughtFishChange={onCaughtFishChange}
@@ -97,7 +108,7 @@ export default function FishGuide(): ReactElement {
                     return (
                         <FishTable
                             hemisphere={hemisphere}
-                            isRealTime={isRealTime}
+                            isRealTime={hideUnavailable}
                             caughtFish={caughtFish}
                             showCaughtFish={showCaughtFish}
                             onCaughtFishChange={onCaughtFishChange}

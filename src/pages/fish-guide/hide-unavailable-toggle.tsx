@@ -8,10 +8,12 @@ const ToggleContainer = styled.div`
 `;
 
 interface Props {
+    checked: boolean;
     onChange: (checked: boolean) => void;
 }
 
 export default function HideUnavailableToggle({
+    checked,
     onChange,
 }: Props): ReactElement {
     function onSwitchChange(checked: boolean): void {
@@ -21,7 +23,7 @@ export default function HideUnavailableToggle({
     return (
         <ToggleContainer>
             <Space>
-                <Switch onChange={onSwitchChange} />
+                <Switch checked={checked} onChange={onSwitchChange} />
                 <span>Hide unavailable</span>
             </Space>
         </ToggleContainer>
