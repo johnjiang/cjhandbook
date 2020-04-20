@@ -1,15 +1,17 @@
 import React, { ReactElement } from "react";
-import { Progress, Select, Space } from "antd";
+import { Select } from "antd";
 import styled from "styled-components";
 import Media from "react-media";
 import "antd/es/date-picker/style/css";
 
-import FishTable, { Hemisphere } from "./fish-table";
+import fishData from "../../../data/json/fish.json";
+import FishTable, { Hemisphere, isFishAvailable } from "./fish-table";
 import useLocalStorage from "../../helpers/use-local-storage";
 import HideUnavailableToggle from "./hide-unavailable-toggle";
 import CaughtFishToggle from "./caught-fish-toggle";
 import SearchInput from "./search-input";
 import FishCards from "./fish-cards";
+import isEmpty from "lodash/isEmpty";
 
 const { Option } = Select;
 
@@ -47,13 +49,18 @@ export default function FishGuide(): ReactElement {
         "hideUnavailable",
         false,
     );
-    const [showCaughtFish, setShowCaughtFish] = useLocalStorage(
-        "showCaughtFish",
-        true,
+    const [hideCaughtFish, setShowCaughtFish] = useLocalStorage(
+        "hideCaughtFish",
+        false,
     );
     const [searchFilter, setSearchFilter] = useLocalStorage("fishSearch", "");
 
-    const [caughtFish, setCaughtFish] = useLocalStorage("caughtFish", {});
+    const defaultCaughtFish: Record<string, boolean> = {};
+
+    const [caughtFish, setCaughtFish] = useLocalStorage(
+        "caughtFish",
+        defaultCaughtFish,
+    );
 
     function onCaughtFishChange(fishName: string, isCaught: boolean): void {
         const newCaughtFish = {
@@ -63,7 +70,25 @@ export default function FishGuide(): ReactElement {
         setCaughtFish(newCaughtFish);
     }
 
-    const totalCaught = Object.values(caughtFish).filter(Boolean).length;
+    let fishies = Object.values(fishData);
+
+    if (hideUnavailable) {
+        fishies = fishies.filter((data) => {
+            return isFishAvailable(data, hemisphere);
+        });
+    }
+
+    if (hideCaughtFish) {
+        fishies = fishies.filter((data) => {
+            return !caughtFish[data.name];
+        });
+    }
+
+    if (searchFilter && !isEmpty(searchFilter)) {
+        fishies = fishies.filter((data) => {
+            return data.name.toLowerCase().includes(searchFilter.toLowerCase());
+        });
+    }
 
     return (
         <ContentContainer>
@@ -89,7 +114,7 @@ export default function FishGuide(): ReactElement {
                 />
 
                 <CaughtFishToggle
-                    checked={showCaughtFish}
+                    checked={hideCaughtFish}
                     onChange={(val): void => setShowCaughtFish(val)}
                 />
             </ToolbarContainer>
@@ -98,24 +123,20 @@ export default function FishGuide(): ReactElement {
                     if (matches) {
                         return (
                             <FishCards
+                                fishies={fishies}
                                 hemisphere={hemisphere}
-                                isRealTime={hideUnavailable}
                                 caughtFish={caughtFish}
-                                showCaughtFish={showCaughtFish}
                                 onCaughtFishChange={onCaughtFishChange}
-                                searchFilter={searchFilter}
                             />
                         );
                     }
 
                     return (
                         <FishTable
+                            fishies={fishies}
                             hemisphere={hemisphere}
-                            isRealTime={hideUnavailable}
                             caughtFish={caughtFish}
-                            showCaughtFish={showCaughtFish}
                             onCaughtFishChange={onCaughtFishChange}
-                            searchFilter={searchFilter}
                         />
                     );
                 }}

@@ -1,11 +1,8 @@
 import React, { ReactElement } from "react";
 import { Checkbox, Table } from "antd";
 import numeral from "numeral";
-
-import fishData from "../../../data/json/fish.json";
 import styled from "styled-components";
 import { isInMonthRange, isInTimeRange } from "../../helpers/date-helper";
-import isEmpty from "lodash/isEmpty";
 import FishStatusTag from "./fish-status-tag";
 
 const { Column } = Table;
@@ -100,45 +97,21 @@ export function isFishAvailable(
 }
 
 interface Props {
+    fishies: FishData[];
     hemisphere: Hemisphere;
-    isRealTime: boolean;
-    showCaughtFish?: boolean;
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
-    searchFilter?: string;
 }
 
 export default function FishTable({
-    isRealTime,
-    showCaughtFish = true,
+    fishies,
     hemisphere,
     caughtFish,
     onCaughtFishChange,
-    searchFilter,
 }: Props): ReactElement {
-    let dataSource: FishData[] = Object.values(fishData);
-
-    if (isRealTime) {
-        dataSource = dataSource.filter((data) => {
-            return isFishAvailable(data, hemisphere);
-        });
-    }
-
-    if (!showCaughtFish) {
-        dataSource = dataSource.filter((data) => {
-            return !caughtFish[data.name];
-        });
-    }
-
-    if (searchFilter && !isEmpty(searchFilter)) {
-        dataSource = dataSource.filter((data) => {
-            return data.name.toLowerCase().includes(searchFilter.toLowerCase());
-        });
-    }
-
     return (
         <Table
-            dataSource={dataSource}
+            dataSource={fishies}
             pagination={false}
             rowKey="name"
             showSorterTooltip={false}

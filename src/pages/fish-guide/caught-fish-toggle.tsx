@@ -24,7 +24,7 @@ export default function CaughtFishToggle({
         <ToggleContainer>
             <Space>
                 <Switch onChange={onSwitchChange} checked={checked} />
-                <span>Show Caught Fish</span>
+                <span>Hide caught</span>
             </Space>
         </ToggleContainer>
     );
