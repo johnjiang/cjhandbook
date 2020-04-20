@@ -1,46 +1,68 @@
 import React, { ReactElement } from "react";
 import { Layout } from "antd";
-import { MemoryRouter as Router, Route, Switch } from "react-router-dom";
-import ReactGA from "react-ga";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Media from "react-media";
 import "antd/dist/antd.css";
 
-ReactGA.initialize("UA-164017649-1", {
-    gaOptions: {
-        siteSpeedSampleRate: 100,
-    },
-});
-
 import FishGuide from "./pages/fish-guide";
+import HeaderMenu from "./pages/menu";
+import styled from "styled-components";
+import AboutPage from "./pages/about";
+import FooterContent from "./pages/footer-content";
 
-const { Content } = Layout;
+const { Content, Footer, Header } = Layout;
+
+const ContentContainer = styled.div`
+    background: #fff;
+    padding: 24px;
+    min-height: 800px;
+`;
 
 export default function App(): ReactElement {
     return (
         <Router>
-            <Layout>
-                <Media query="(max-width: 599px)">
-                    {(matches): ReactElement => {
-                        const style: Record<string, string> = {
-                            background: "#fff",
-                        };
+            <Layout style={{ minHeight: "100vh" }}>
+                <Header>
+                    <HeaderMenu />
+                </Header>
+                <Layout>
+                    <Media query="(max-width: 599px)">
+                        {(matches): ReactElement => {
+                            const style: Record<string, string> = {
+                                background: "#fff",
+                            };
 
-                        if (!matches) {
-                            style.margin = "10px 10px 0px 10px";
-                            style.padding = "10px";
-                        }
+                            if (!matches) {
+                                style.margin = "10px 10px 0px 10px";
+                                style.padding = "10px";
+                            }
 
-                        return (
-                            <Content style={style}>
-                                <Switch>
-                                    <Route exact path="/">
-                                        <FishGuide />
-                                    </Route>
-                                </Switch>
-                            </Content>
-                        );
+                            return (
+                                <Content style={style}>
+                                    <ContentContainer>
+                                        <Switch>
+                                            <Route exact path="/">
+                                                <FishGuide />
+                                            </Route>
+                                            <Route exact path="/about">
+                                                <AboutPage />
+                                            </Route>
+                                        </Switch>
+                                    </ContentContainer>
+                                </Content>
+                            );
+                        }}
+                    </Media>
+                </Layout>
+                <Footer
+                    style={{
+                        textAlign: "center",
+                        height: "40px",
+                        padding: "10px",
                     }}
-                </Media>
+                >
+                    <FooterContent />
+                </Footer>
             </Layout>
         </Router>
     );

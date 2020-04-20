@@ -15,12 +15,6 @@ import isEmpty from "lodash/isEmpty";
 
 const { Option } = Select;
 
-const ContentContainer = styled.div`
-    background: #fff;
-    padding: 24px;
-    min-height: 800px;
-`;
-
 const ToolbarContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -91,7 +85,7 @@ export default function FishGuide(): ReactElement {
     }
 
     return (
-        <ContentContainer>
+        <>
             <ToolbarContainer>
                 <SearchContainer>
                     <SearchInput
@@ -141,6 +135,6 @@ export default function FishGuide(): ReactElement {
                     );
                 }}
             </Media>
-        </ContentContainer>
+        </>
     );
 }
