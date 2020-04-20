@@ -19,16 +19,23 @@ const ContentContainer = styled.div`
     min-height: 800px;
 `;
 
-const ProgressContainer = styled.div`
-    width: 200px;
-`;
-
 const ToolbarContainer = styled.div`
     display: flex;
     flex-direction: row;
     padding-bottom: 10px;
-    justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 599px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 150px;
+    }
+`;
+
+const SearchContainer = styled.div`
+    width: 200px;
+    padding-right: 10px;
 `;
 
 export default function FishGuide(): ReactElement {
@@ -61,37 +68,30 @@ export default function FishGuide(): ReactElement {
     return (
         <ContentContainer>
             <ToolbarContainer>
-                <Space>
+                <SearchContainer>
                     <SearchInput
                         query={searchFilter}
                         onChange={setSearchFilter}
                     />
-                    <Select
-                        defaultValue={hemisphere}
-                        style={{ width: 120 }}
-                        onChange={(data): void => setHemisphere(data)}
-                    >
-                        <Option value={Hemisphere.NORTHEN}>Northern</Option>
-                        <Option value={Hemisphere.SOUTHERN}>Southern</Option>
-                    </Select>
+                </SearchContainer>
+                <Select
+                    defaultValue={hemisphere}
+                    style={{ width: 120 }}
+                    onChange={(data): void => setHemisphere(data)}
+                >
+                    <Option value={Hemisphere.NORTHEN}>Northern</Option>
+                    <Option value={Hemisphere.SOUTHERN}>Southern</Option>
+                </Select>
 
-                    <HideUnavailableToggle
-                        checked={hideUnavailable}
-                        onChange={(val): void => setHideUnavailable(val)}
-                    />
+                <HideUnavailableToggle
+                    checked={hideUnavailable}
+                    onChange={(val): void => setHideUnavailable(val)}
+                />
 
-                    <CaughtFishToggle
-                        checked={showCaughtFish}
-                        onChange={(val): void => setShowCaughtFish(val)}
-                    />
-                </Space>
-
-                <ProgressContainer>
-                    <Progress
-                        percent={Math.ceil((totalCaught / 80) * 100)}
-                        status="active"
-                    />
-                </ProgressContainer>
+                <CaughtFishToggle
+                    checked={showCaughtFish}
+                    onChange={(val): void => setShowCaughtFish(val)}
+                />
             </ToolbarContainer>
             <Media query="(max-width: 599px)">
                 {(matches): ReactElement => {
