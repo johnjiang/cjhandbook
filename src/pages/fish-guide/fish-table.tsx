@@ -1,11 +1,12 @@
 import React, { ReactElement } from "react";
-import { Checkbox, Table, Tag } from "antd";
+import { Checkbox, Table } from "antd";
 import numeral from "numeral";
 
 import fishData from "../../../data/json/fish.json";
 import styled from "styled-components";
 import { isInMonthRange, isInTimeRange } from "../../helpers/date-helper";
 import isEmpty from "lodash/isEmpty";
+import FishStatusTag from "./fish-status-tag";
 
 const { Column } = Table;
 
@@ -54,7 +55,7 @@ export interface TimeRange {
     end: number;
 }
 
-interface FishData {
+export interface FishData {
     name: string;
     location: string;
     size: string;
@@ -64,7 +65,10 @@ interface FishData {
     southernMonths: MonthRange[] | null;
 }
 
-function isFishAvailable(data: FishData, hemisphere: Hemisphere): boolean {
+export function isFishAvailable(
+    data: FishData,
+    hemisphere: Hemisphere,
+): boolean {
     if (data.time) {
         const inTimeRange = data.time.some((interval) => {
             return isInTimeRange(new Date(), interval);
@@ -264,10 +268,9 @@ export default function FishTable({
                 key="status"
                 align="center"
                 render={(value, record: FishData): ReactElement => {
-                    if (isFishAvailable(record, hemisphere)) {
-                        return <Tag color="green">AVAILABLE</Tag>;
-                    }
-                    return <Tag color="red">UNAVAILABLE</Tag>;
+                    return (
+                        <FishStatusTag fish={record} hemisphere={hemisphere} />
+                    );
                 }}
             />
         </Table>

@@ -1,12 +1,15 @@
 import React, { ReactElement, useState } from "react";
 import { Progress, Select, Space } from "antd";
 import styled from "styled-components";
+import Media from "react-media";
 import "antd/es/date-picker/style/css";
+
 import FishTable, { Hemisphere } from "./fish-table";
 import useLocalStorage from "../../helpers/use-local-storage";
 import HideUnavailableToggle from "./hide-unavailable-toggle";
 import CaughtFishToggle from "./caught-fish-toggle";
 import SearchInput from "./search-input";
+import FishCards from "./fish-cards";
 
 const { Option } = Select;
 
@@ -76,15 +79,33 @@ export default function FishGuide(): ReactElement {
                     />
                 </ProgressContainer>
             </ToolbarContainer>
+            <Media query="(max-width: 599px)">
+                {(matches): ReactElement => {
+                    if (matches) {
+                        return (
+                            <FishCards
+                                hemisphere={hemisphere}
+                                isRealTime={isRealTime}
+                                caughtFish={caughtFish}
+                                showCaughtFish={showCaughtFish}
+                                onCaughtFishChange={onCaughtFishChange}
+                                searchFilter={searchFilter}
+                            />
+                        );
+                    }
 
-            <FishTable
-                hemisphere={hemisphere}
-                isRealTime={isRealTime}
-                caughtFish={caughtFish}
-                showCaughtFish={showCaughtFish}
-                onCaughtFishChange={onCaughtFishChange}
-                searchFilter={searchFilter}
-            />
+                    return (
+                        <FishTable
+                            hemisphere={hemisphere}
+                            isRealTime={isRealTime}
+                            caughtFish={caughtFish}
+                            showCaughtFish={showCaughtFish}
+                            onCaughtFishChange={onCaughtFishChange}
+                            searchFilter={searchFilter}
+                        />
+                    );
+                }}
+            </Media>
         </ContentContainer>
     );
 }
