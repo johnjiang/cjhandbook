@@ -62,7 +62,10 @@ export default function FishGuide(): ReactElement {
         <ContentContainer>
             <ToolbarContainer>
                 <Space>
-                    <SearchInput onChange={setSearchFilter} />
+                    <SearchInput
+                        query={searchFilter}
+                        onChange={setSearchFilter}
+                    />
                     <Select
                         defaultValue={hemisphere}
                         style={{ width: 120 }}
