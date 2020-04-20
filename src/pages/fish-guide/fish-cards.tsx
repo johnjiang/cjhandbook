@@ -59,6 +59,7 @@ export default function FishCards({
                                 title={
                                     <span>
                                         <StarFish
+                                            fish={fish}
                                             isCaught={Boolean(
                                                 caughtFish[fish.name],
                                             )}
