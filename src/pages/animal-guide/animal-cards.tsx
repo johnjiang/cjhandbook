@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Hemisphere } from "./animal-table";
 import AnimalStatusTag from "./animal-status-tag";
 import StarAnimal from "./star-animal";
-import { Animal, AnimalType } from "../../types";
+import { Animal, AnimalType, Fish } from "../../types";
 
 const CardContainer = styled.div`
     padding-bottom: 10px;
@@ -18,6 +18,10 @@ interface Props {
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
     searchFilter?: string;
+}
+
+function isFish(animal: Animal): animal is Fish {
+    return (animal as Fish).size !== undefined;
 }
 
 export default function AnimalCards({
@@ -67,7 +71,7 @@ export default function AnimalCards({
                                 style={{ width: "100%" }}
                             >
                                 <p>Location: {animal.location}</p>
-                                {/*<p>Size: {animal.size}</p>*/}
+                                {isFish(animal) && <p>Size: {animal.size}</p>}
                                 <p>Price: {animal.price}</p>
                             </Card>
                         </CardContainer>
