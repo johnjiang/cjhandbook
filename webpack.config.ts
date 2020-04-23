@@ -36,12 +36,12 @@ module.exports = (env: any, argv: any): any => {
             new CleanWebpackPlugin(),
             new CopyWebpackPlugin([
                 {
-                    from: "public/images/",
-                    to: "images",
+                    from: "public",
+                    to: ".",
                 },
             ]),
             new HtmlWebpackPlugin({
-                template: path.resolve(__dirname, "public", "index.html"),
+                template: path.resolve(__dirname, "src", "index.html"),
                 // favicon: path.resolve(__dirname, "public", "favicon.ico"),
             }),
             new MiniCssExtractPlugin({
