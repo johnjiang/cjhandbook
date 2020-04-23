@@ -21,6 +21,15 @@ export default function HeaderMenu(): ReactElement {
                 </Menu.Item>
                 <Menu.Item>
                     <a
+                        href="https://turnip.exchange/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Turnip Exchange
+                    </a>
+                </Menu.Item>
+                <Menu.Item>
+                    <a
                         href="https://wuffs.org/acnh/mysterytour.html"
                         target="_blank"
                         rel="noopener noreferrer"
