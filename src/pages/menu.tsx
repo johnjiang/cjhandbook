@@ -11,6 +11,24 @@ export default function HeaderMenu(): ReactElement {
                     {"CJ's Handbook"}
                 </Menu.Item>
                 <Menu.Item>
+                    <a
+                        href="https://turnipprophet.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Turnip Prophet
+                    </a>
+                </Menu.Item>
+                <Menu.Item>
+                    <a
+                        href="https://wuffs.org/acnh/mysterytour.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Mystery Tour
+                    </a>
+                </Menu.Item>
+                <Menu.Item>
                     <Link to="/about" />
                     About
                 </Menu.Item>
