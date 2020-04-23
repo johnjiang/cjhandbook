@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
+import { ExportOutlined } from "@ant-design/icons";
 
 export default function HeaderMenu(): ReactElement {
     return (
@@ -11,11 +12,16 @@ export default function HeaderMenu(): ReactElement {
                     {"CJ's Handbook"}
                 </Menu.Item>
                 <Menu.Item>
+                    <Link to="/about" />
+                    About
+                </Menu.Item>
+                <Menu.Item>
                     <a
                         href="https://turnipprophet.io/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <ExportOutlined />
                         Turnip Prophet
                     </a>
                 </Menu.Item>
@@ -25,6 +31,7 @@ export default function HeaderMenu(): ReactElement {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <ExportOutlined />
                         Turnip Exchange
                     </a>
                 </Menu.Item>
@@ -34,12 +41,9 @@ export default function HeaderMenu(): ReactElement {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <ExportOutlined />
                         Mystery Tour
                     </a>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/about" />
-                    About
                 </Menu.Item>
             </Menu>
         </>
