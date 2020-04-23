@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Hemisphere } from "./animal-table";
 import AnimalStatusTag from "./animal-status-tag";
 import StarAnimal from "./star-animal";
-import { Animal } from "../../types";
+import { Animal, AnimalType } from "../../types";
 
 const CardContainer = styled.div`
     padding-bottom: 10px;
@@ -13,6 +13,7 @@ const CardContainer = styled.div`
 
 interface Props {
     animals: Animal[];
+    animalType: AnimalType;
     hemisphere: Hemisphere;
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
@@ -21,6 +22,7 @@ interface Props {
 
 export default function AnimalCards({
     animals,
+    animalType,
     hemisphere,
     caughtFish,
     onCaughtFishChange,
@@ -28,38 +30,45 @@ export default function AnimalCards({
     return (
         <div>
             {animals.map(
-                (fish): ReactElement => {
+                (animal): ReactElement => {
                     return (
-                        <CardContainer key={fish.name}>
+                        <CardContainer key={animal.name}>
                             <Card
                                 title={
                                     <span>
                                         <StarAnimal
-                                            animal={fish}
+                                            animal={animal}
                                             isCaught={Boolean(
-                                                caughtFish[fish.name],
+                                                caughtFish[animal.name],
                                             )}
                                             onClick={(isChecked): void => {
                                                 onCaughtFishChange(
-                                                    fish.name,
+                                                    animal.name,
                                                     isChecked,
                                                 );
                                             }}
                                         />{" "}
-                                        {fish.name}
+                                        <img
+                                            src={`/images/${animalType.toLowerCase()}-${
+                                                animal.id
+                                            }.png`}
+                                            alt={animal.name}
+                                            loading="lazy"
+                                        />
+                                        {animal.name}
                                     </span>
                                 }
                                 extra={
                                     <AnimalStatusTag
-                                        animal={fish}
+                                        animal={animal}
                                         hemisphere={hemisphere}
                                     />
                                 }
-                                style={{ width: 300 }}
+                                style={{ width: "100%" }}
                             >
-                                <p>Location: {fish.location}</p>
-                                {/*<p>Size: {fish.size}</p>*/}
-                                <p>Price: {fish.price}</p>
+                                <p>Location: {animal.location}</p>
+                                {/*<p>Size: {animal.size}</p>*/}
+                                <p>Price: {animal.price}</p>
                             </Card>
                         </CardContainer>
                     );

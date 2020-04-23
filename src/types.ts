@@ -8,7 +8,7 @@ export interface TimeRange {
     end: number;
 }
 
-export type Animal = Fish | Insect;
+export type Animal = Fish | Bug;
 
 export interface Fish {
     id: number;
@@ -20,7 +20,7 @@ export interface Fish {
     month: MonthRange[];
 }
 
-export interface Insect {
+export interface Bug {
     id: number;
     name: string;
     location: string;
@@ -31,6 +31,6 @@ export interface Insect {
 
 export enum AnimalType {
     FISH = "FISH",
-    INSECT = "INSECT",
+    BUG = "BUG",
     FOSSIL = "FOSSIL",
 }

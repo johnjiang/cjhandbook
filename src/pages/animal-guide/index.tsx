@@ -14,7 +14,7 @@ import CaughtFishToggle from "./caught-fish-toggle";
 import SearchInput from "./search-input";
 import AnimalCards from "./animal-cards";
 import { MEDIA_QUERY } from "../../helpers/media";
-import { Animal, AnimalType, Fish, Insect } from "../../types";
+import { Animal, AnimalType, Bug, Fish } from "../../types";
 
 const { Option } = Select;
 const { TabPane } = Tabs;
@@ -106,7 +106,7 @@ export default function FishGuide(): ReactElement {
         hideUnavailable,
         hideCaughtAnimals,
         searchFilter,
-    ) as Insect[];
+    ) as Bug[];
 
     return (
         <>
@@ -164,6 +164,7 @@ export default function FishGuide(): ReactElement {
                                 return (
                                     <AnimalCards
                                         animals={fishies}
+                                        animalType={AnimalType.FISH}
                                         hemisphere={hemisphere}
                                         caughtFish={caughtAnimals}
                                         onCaughtFishChange={onCaughtFishChange}
@@ -183,13 +184,14 @@ export default function FishGuide(): ReactElement {
                         }}
                     </Media>
                 </TabPane>
-                <TabPane tab="Insects" key="2">
+                <TabPane tab="Bugs" key="2">
                     <Media query={MEDIA_QUERY}>
                         {(matches): ReactElement => {
                             if (matches) {
                                 return (
                                     <AnimalCards
                                         animals={insects}
+                                        animalType={AnimalType.BUG}
                                         hemisphere={hemisphere}
                                         caughtFish={caughtAnimals}
                                         onCaughtFishChange={onCaughtFishChange}
@@ -199,7 +201,7 @@ export default function FishGuide(): ReactElement {
 
                             return (
                                 <AnimalTable
-                                    animalType={AnimalType.INSECT}
+                                    animalType={AnimalType.BUG}
                                     animals={insects}
                                     hemisphere={hemisphere}
                                     caughtFish={caughtAnimals}

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Checkbox, Table } from "antd";
+import { Checkbox, Space, Table } from "antd";
 import numeral from "numeral";
 import styled from "styled-components";
 import { isInMonthRange, isInTimeRange } from "../../helpers/date-helper";
@@ -109,9 +109,9 @@ export default function AnimalTable({
                 dataIndex="name"
                 key="caught"
                 align="center"
-                render={(name: string): ReactElement => {
+                render={(name: string, record: Fish): ReactElement => {
                     return (
-                        <span>
+                        <Space>
                             <Checkbox
                                 value={name}
                                 checked={caughtFish[name]}
@@ -119,7 +119,14 @@ export default function AnimalTable({
                                     onCaughtFishChange(name, e.target.checked);
                                 }}
                             />
-                        </span>
+                            <img
+                                src={`/images/${animalType.toLowerCase()}-${
+                                    record.id
+                                }.png`}
+                                alt={name}
+                                loading="lazy"
+                            />
+                        </Space>
                     );
                 }}
             />

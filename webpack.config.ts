@@ -1,5 +1,6 @@
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
@@ -33,6 +34,12 @@ module.exports = (env: any, argv: any): any => {
         },
         plugins: [
             new CleanWebpackPlugin(),
+            new CopyWebpackPlugin([
+                {
+                    from: "public/images/",
+                    to: "images",
+                },
+            ]),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, "public", "index.html"),
                 // favicon: path.resolve(__dirname, "public", "favicon.ico"),
