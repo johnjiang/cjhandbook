@@ -1,17 +1,19 @@
 import React, { ReactElement } from "react";
-import { FishData, Hemisphere, isFishAvailable } from "./fish-table";
 import { Tag } from "antd";
 
+import { Hemisphere, isAnimalAvailable } from "./animal-table";
+import { Animal } from "../../types";
+
 interface Props {
-    fish: FishData;
+    animal: Animal;
     hemisphere: Hemisphere;
 }
 
-export default function FishStatusTag({
-    fish,
+export default function AnimalStatusTag({
+    animal,
     hemisphere,
 }: Props): ReactElement {
-    if (isFishAvailable(fish, hemisphere)) {
+    if (isAnimalAvailable(animal, hemisphere)) {
         return <Tag color="green">AVAILABLE</Tag>;
     }
     return <Tag color="red">UNAVAILABLE</Tag>;

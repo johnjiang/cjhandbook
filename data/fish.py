@@ -6,7 +6,10 @@ MONTH_TO_NUMBER = {v: k - 1 for k, v in enumerate(calendar.month_name)}
 
 def month_text_to_range(text):
     if text == "Year-round":
-        return None
+        return [{
+            'start': 0,
+            'end': 11
+        }]
 
     ranges = [t.strip() for t in text.split(",")]
     results = []
@@ -52,34 +55,59 @@ def time_text_to_range(text):
     return results
 
 
-def main():
-    data = {}
+def process_fish():
+    data = []
     with open('raw/fish.txt', 'r') as file:
-        for line in file.readlines():
-            fish, location, size, price, time, months = line.strip().split("\t")
+        for i, line in enumerate(file.readlines()):
+            name, location, size, price, time, months = line.strip().split("\t")
             months = months.split("/")
             if len(months) == 1:
                 month = months[0].replace(" (Northern and Southern)", "")
                 northern = month
-                southern = month
             else:
-                northern, southern = months
+                northern = months[0]
 
                 northern = northern.replace(" (Northern)", "")
-                southern = southern.replace(" (Southern)", "")
-            data[fish] = {
-                "name": fish,
+            data.append({
+                "id": i,
+                "name": name,
                 "location": location,
                 "size": size,
                 "price": int(price.replace(",", "")),
                 "time": time_text_to_range(time),
-                "northenMonths": month_text_to_range(northern),
-                "southernMonths": month_text_to_range(southern),
-            }
+                "month": month_text_to_range(northern),
+            })
 
     with open('json/fish.json', 'w') as file:
         json.dump(data, file)
 
 
+def process_insects():
+    data = []
+    with open('raw/insects.txt', 'r') as file:
+        for i, line in enumerate(file.readlines()):
+            name, location, price, time, months = line.strip().split("\t")
+            months = months.split("/")
+            if len(months) == 1:
+                month = months[0].replace(" (Northern and Southern)", "")
+                northern = month
+            else:
+                northern = months[0]
+
+                northern = northern.replace(" (Northern)", "")
+            data.append({
+                "id": i,
+                "name": name,
+                "location": location,
+                "price": int(price.replace(",", "")),
+                "time": time_text_to_range(time),
+                "month": month_text_to_range(northern),
+            })
+
+    with open('json/insects.json', 'w') as file:
+        json.dump(data, file)
+
+
 if __name__ == '__main__':
-    main()
+    process_fish()
+    process_insects()

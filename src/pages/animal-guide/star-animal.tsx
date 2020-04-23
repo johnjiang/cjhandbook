@@ -1,16 +1,16 @@
 import React, { ReactElement } from "react";
 import { StarTwoTone } from "@ant-design/icons";
 import { message } from "antd";
-import { FishData } from "./fish-table";
+import { Animal } from "../../types";
 
 interface Props {
-    fish: FishData;
+    animal: Animal;
     isCaught: boolean;
     onClick?: (isChecked: boolean) => void;
 }
 
-export default function StarFish({
-    fish,
+export default function StarAnimal({
+    animal,
     isCaught,
     onClick,
 }: Props): ReactElement {
@@ -18,9 +18,9 @@ export default function StarFish({
         if (onClick) {
             onClick(!isCaught);
             if (isCaught) {
-                message.success(`Unmarked ${fish.name}`);
+                message.success(`Unmarked ${animal.name}`);
             } else {
-                message.success(`Marked ${fish.name}`);
+                message.success(`Marked ${animal.name}`);
             }
         }
     }

@@ -3,7 +3,8 @@ import { Checkbox, Table } from "antd";
 import numeral from "numeral";
 import styled from "styled-components";
 import { isInMonthRange, isInTimeRange } from "../../helpers/date-helper";
-import FishStatusTag from "./fish-status-tag";
+import AnimalStatusTag from "./animal-status-tag";
+import { Animal, AnimalType, Fish, MonthRange, TimeRange } from "../../types";
 
 const { Column } = Table;
 
@@ -42,28 +43,8 @@ const RangeContainer = styled.div`
     flex-direction: column;
 `;
 
-export interface MonthRange {
-    start: number;
-    end: number;
-}
-
-export interface TimeRange {
-    start: number;
-    end: number;
-}
-
-export interface FishData {
-    name: string;
-    location: string;
-    size: string;
-    price: number;
-    time: TimeRange[] | null;
-    northenMonths: MonthRange[] | null;
-    southernMonths: MonthRange[] | null;
-}
-
-export function isFishAvailable(
-    data: FishData,
+export function isAnimalAvailable(
+    data: Animal,
     hemisphere: Hemisphere,
 ): boolean {
     if (data.time) {
@@ -78,9 +59,14 @@ export function isFishAvailable(
 
     let monthIntervals;
     if (hemisphere === Hemisphere.NORTHEN) {
-        monthIntervals = data.northenMonths;
+        monthIntervals = data.month;
     } else {
-        monthIntervals = data.southernMonths;
+        monthIntervals = data.month.map((interval) => {
+            return {
+                start: (interval.start + 6) % 12,
+                end: (interval.end + 6) % 12,
+            };
+        });
     }
 
     if (monthIntervals) {
@@ -97,21 +83,23 @@ export function isFishAvailable(
 }
 
 interface Props {
-    fishies: FishData[];
+    animalType: AnimalType;
+    animals: Animal[];
     hemisphere: Hemisphere;
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
 }
 
-export default function FishTable({
-    fishies,
+export default function AnimalTable({
+    animalType,
+    animals,
     hemisphere,
     caughtFish,
     onCaughtFishChange,
 }: Props): ReactElement {
     return (
         <Table
-            dataSource={fishies}
+            dataSource={animals}
             pagination={false}
             rowKey="name"
             showSorterTooltip={false}
@@ -138,43 +126,39 @@ export default function FishTable({
             <Column
                 title="Name"
                 dataIndex="name"
-                sorter={(a: FishData, b: FishData): number =>
+                sorter={(a: Animal, b: Animal): number =>
                     a.name.localeCompare(b.name)
                 }
             />
             <Column
                 title="Location"
                 dataIndex="location"
-                filters={[
-                    { text: "River", value: "River" },
-                    { text: "Pond", value: "Pond" },
-                    { text: "Sea", value: "Sea" },
-                ]}
-                onFilter={(value, record: FishData): boolean =>
-                    record.location.includes(String(value))
-                }
-                sorter={(a, b): number => a.location.localeCompare(b.location)}
-            />
-            <Column
-                title="Size"
-                dataIndex="size"
-                filters={[
-                    { text: "Narow", value: "Narrow" },
-                    { text: "Smallest", value: "Smallest" },
-                    { text: "Small", value: "Small" },
-                    { text: "Medium", value: "Medium" },
-                    { text: "Large", value: "Large" },
-                    { text: "X-Large", value: "X Large" },
-                ]}
-                onFilter={(value, record: FishData): boolean =>
-                    record.size === value
+                sorter={(a: Animal, b: Animal): number =>
+                    a.location.localeCompare(b.location)
                 }
             />
+            {animalType === AnimalType.FISH && (
+                <Column
+                    title="Size"
+                    dataIndex="size"
+                    filters={[
+                        { text: "Narow", value: "Narrow" },
+                        { text: "Smallest", value: "Smallest" },
+                        { text: "Small", value: "Small" },
+                        { text: "Medium", value: "Medium" },
+                        { text: "Large", value: "Large" },
+                        { text: "X-Large", value: "X Large" },
+                    ]}
+                    onFilter={(value, record: Fish): boolean =>
+                        record.size === value
+                    }
+                />
+            )}
             <Column
                 title="Price"
                 dataIndex="price"
                 align="right"
-                sorter={(a: FishData, b: FishData): number => a.price - b.price}
+                sorter={(a: Animal, b: Animal): number => a.price - b.price}
                 render={(value): ReactElement => {
                     return <span>{numeral(value).format("0,0")}</span>;
                 }}
@@ -208,11 +192,7 @@ export default function FishTable({
             />
             <Column
                 title="Month"
-                dataIndex={
-                    hemisphere === Hemisphere.NORTHEN
-                        ? "northenMonths"
-                        : "southernMonths"
-                }
+                dataIndex="month"
                 render={(
                     ranges: MonthRange[] | null,
                 ): ReactElement | ReactElement[] => {
@@ -224,10 +204,19 @@ export default function FishTable({
                         <RangeContainer>
                             {ranges.map(
                                 (range, index): ReactElement => {
+                                    let { start, end } = range;
+
+                                    if (
+                                        hemisphere === Hemisphere.SOUTHERN &&
+                                        !(start === 0 && end === 11)
+                                    ) {
+                                        start = (start + 6) % 12;
+                                        end = (end + 6) % 12;
+                                    }
+
                                     return (
                                         <span key={index}>
-                                            {MONTHS[range.start]} -{" "}
-                                            {MONTHS[range.end]}
+                                            {MONTHS[start]} - {MONTHS[end]}
                                         </span>
                                     );
                                 },
@@ -240,9 +229,12 @@ export default function FishTable({
                 title={"Status"}
                 key="status"
                 align="center"
-                render={(value, record: FishData): ReactElement => {
+                render={(value, record: Animal): ReactElement => {
                     return (
-                        <FishStatusTag fish={record} hemisphere={hemisphere} />
+                        <AnimalStatusTag
+                            animal={record}
+                            hemisphere={hemisphere}
+                        />
                     );
                 }}
             />

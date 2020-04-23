@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Media from "react-media";
 import "antd/dist/antd.css";
 
-import FishGuide from "./pages/fish-guide";
+import FishGuide from "./pages/animal-guide";
 import HeaderMenu from "./pages/menu";
 import styled from "styled-components";
 import AboutPage from "./pages/about";

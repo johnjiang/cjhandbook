@@ -2,39 +2,40 @@ import React, { ReactElement } from "react";
 import { Card } from "antd";
 import styled from "styled-components";
 
-import { FishData, Hemisphere } from "./fish-table";
-import FishStatusTag from "./fish-status-tag";
-import StarFish from "./star-fish";
+import { Hemisphere } from "./animal-table";
+import AnimalStatusTag from "./animal-status-tag";
+import StarAnimal from "./star-animal";
+import { Animal } from "../../types";
 
 const CardContainer = styled.div`
     padding-bottom: 10px;
 `;
 
 interface Props {
-    fishies: FishData[];
+    animals: Animal[];
     hemisphere: Hemisphere;
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
     searchFilter?: string;
 }
 
-export default function FishCards({
-    fishies,
+export default function AnimalCards({
+    animals,
     hemisphere,
     caughtFish,
     onCaughtFishChange,
 }: Props): ReactElement {
     return (
         <div>
-            {fishies.map(
+            {animals.map(
                 (fish): ReactElement => {
                     return (
                         <CardContainer key={fish.name}>
                             <Card
                                 title={
                                     <span>
-                                        <StarFish
-                                            fish={fish}
+                                        <StarAnimal
+                                            animal={fish}
                                             isCaught={Boolean(
                                                 caughtFish[fish.name],
                                             )}
@@ -49,15 +50,15 @@ export default function FishCards({
                                     </span>
                                 }
                                 extra={
-                                    <FishStatusTag
-                                        fish={fish}
+                                    <AnimalStatusTag
+                                        animal={fish}
                                         hemisphere={hemisphere}
                                     />
                                 }
                                 style={{ width: 300 }}
                             >
                                 <p>Location: {fish.location}</p>
-                                <p>Size: {fish.size}</p>
+                                {/*<p>Size: {fish.size}</p>*/}
                                 <p>Price: {fish.price}</p>
                             </Card>
                         </CardContainer>
