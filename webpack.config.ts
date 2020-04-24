@@ -59,6 +59,7 @@ module.exports = (env: any, argv: any): any => {
         optimization: {
             splitChunks: {
                 chunks: "all",
+                minChunks: 2,
             },
             minimize: true,
             minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
