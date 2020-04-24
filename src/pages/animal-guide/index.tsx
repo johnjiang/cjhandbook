@@ -1,6 +1,5 @@
 import React, { ReactElement } from "react";
 import { Select, Space, Tabs } from "antd";
-import LZString from "lz-string";
 import styled from "styled-components";
 import Media from "react-media";
 import isEmpty from "lodash/isEmpty";

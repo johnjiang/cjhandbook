@@ -67,9 +67,9 @@
         "*.{js,ts,tsx,json,css,md}": "prettier --write"
     },
     "scripts": {
-        "analyze": "webpack --profile --json | tail -n +5 > stats.json && webpack-bundle-analyzer stats.json dist",
-        "start": "webpack-dev-server --open",
-        "build": "webpack --mode=production",
+        "analyze": "TS_NODE_PROJECT=tsconfig.webpack.json webpack --profile --json | tail -n +5 > stats.json && webpack-bundle-analyzer stats.json dist",
+        "start": "TS_NODE_PROJECT=tsconfig.webpack.json webpack-dev-server --open",
+        "build": "TS_NODE_PROJECT=tsconfig.webpack.json webpack --mode=production",
         "test": "jest",
         "lint": "eslint --ext .ts,.tsx src/"
     },

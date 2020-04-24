@@ -57,6 +57,9 @@ module.exports = (env: any, argv: any): any => {
             overlay: true,
         },
         optimization: {
+            splitChunks: {
+                chunks: "all",
+            },
             minimize: true,
             minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
         },
