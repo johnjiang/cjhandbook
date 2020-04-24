@@ -1,8 +1,10 @@
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
+import TerserPlugin from "terser-webpack-plugin";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 module.exports = (env: any, argv: any): any => {
@@ -53,6 +55,10 @@ module.exports = (env: any, argv: any): any => {
             contentBase: "./dist",
             historyApiFallback: true,
             overlay: true,
+        },
+        optimization: {
+            minimize: true,
+            minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
         },
     };
 };
