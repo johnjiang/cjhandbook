@@ -1,9 +1,10 @@
-import React, { ReactElement, Suspense } from "react";
-import { Layout, Skeleton } from "antd";
+import React, { ReactElement } from "react";
+import { Layout } from "antd";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Media from "react-media";
 import "antd/dist/antd.css";
 
+import FishGuide from "./pages/animal-guide";
 import HeaderMenu from "./pages/menu";
 import styled from "styled-components";
 import AboutPage from "./pages/about";
@@ -17,10 +18,6 @@ const ContentContainer = styled.div`
     padding: 24px;
     min-height: 800px;
 `;
-
-const FishGuide = React.lazy(() =>
-    import(/* webpackChunkName: "animal-guide" */ "./pages/animal-guide"),
-);
 
 export default function App(): ReactElement {
     return (
@@ -46,11 +43,7 @@ export default function App(): ReactElement {
                                     <ContentContainer>
                                         <Switch>
                                             <Route exact path="/">
-                                                <Suspense
-                                                    fallback={<Skeleton />}
-                                                >
-                                                    <FishGuide />
-                                                </Suspense>
+                                                <FishGuide />
                                             </Route>
                                             <Route exact path="/about">
                                                 <AboutPage />
