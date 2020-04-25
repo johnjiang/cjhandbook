@@ -21,7 +21,6 @@ describe("date-helper", () => {
     describe("isInMonthRange", () => {
         const january = new Date(2020, 0, 1);
         const april = new Date(2020, 3, 1);
-        const november = new Date(2020, 10, 1);
         const december = new Date(2020, 11, 1);
 
         it.each`

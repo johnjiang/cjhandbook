@@ -1,5 +1,5 @@
 import React, { CSSProperties, ReactElement } from "react";
-import { Card } from "antd";
+import { Card, Skeleton } from "antd";
 import styled from "styled-components";
 
 import { Art } from "../../types";
@@ -22,6 +22,12 @@ const Image = styled.img`
     display: block;
 `;
 
+const CardGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 10px;
+`;
+
 interface Props {
     arts: Art[];
     ownedArt: Record<string, boolean>;
@@ -36,12 +42,13 @@ export default function ArtCards({
 // onOwnedArtChange,
 Props): ReactElement {
     return (
-        <div>
+        <CardGrid>
             {arts.map(
                 (art): ReactElement => {
                     const artUrlName = art.name.toLowerCase().replace(" ", "-");
                     const realFileName = `${artUrlName}-real.png`;
                     const fakeFilename = `${artUrlName}-fake.png`;
+                    const isStatue = art.name.includes("Statue");
 
                     const realCard = (
                         <Card
@@ -53,11 +60,15 @@ Props): ReactElement {
                             title="Real"
                             bordered={false}
                             cover={
-                                <Image
-                                    src={`/images/art/${realFileName}`}
-                                    alt={art.name}
-                                    loading="lazy"
-                                />
+                                isStatue ? (
+                                    <Skeleton />
+                                ) : (
+                                    <Image
+                                        src={`/images/art/${realFileName}`}
+                                        alt={art.name}
+                                        loading="lazy"
+                                    />
+                                )
                             }
                         />
                     );
@@ -67,6 +78,10 @@ Props): ReactElement {
                             <Card
                                 headStyle={cardHeadeStyle}
                                 title={<span>{art.name}</span>}
+                                style={{
+                                    height: "100%",
+                                    maxWidth: "400px",
+                                }}
                             >
                                 {art.fakes ? (
                                     <ArtGroup>
@@ -81,11 +96,15 @@ Props): ReactElement {
                                             title="Fake"
                                             bordered={false}
                                             cover={
-                                                <Image
-                                                    src={`/images/art/${fakeFilename}`}
-                                                    alt={art.name}
-                                                    loading="lazy"
-                                                />
+                                                isStatue ? (
+                                                    <Skeleton />
+                                                ) : (
+                                                    <Image
+                                                        src={`/images/art/${fakeFilename}`}
+                                                        alt={art.name}
+                                                        loading="lazy"
+                                                    />
+                                                )
                                             }
                                         >
                                             {art.fakes[0].reason}
@@ -104,6 +123,6 @@ Props): ReactElement {
                     );
                 },
             )}
-        </div>
+        </CardGrid>
     );
 }

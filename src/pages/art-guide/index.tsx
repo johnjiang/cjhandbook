@@ -58,6 +58,8 @@ export default function ArtGuide(): ReactElement {
         defaultOwnedArt,
     );
 
+    const arts = filterArt(artData, ownedArt, hideOwned, searchFilter);
+
     function onOwnedArt(artName: string, isCaught: boolean): void {
         const newOwnedArt = {
             ...ownedArt,
@@ -65,8 +67,6 @@ export default function ArtGuide(): ReactElement {
         };
         setOwnedArt(newOwnedArt);
     }
-
-    const arts = filterArt(artData, ownedArt, hideOwned, searchFilter);
 
     return (
         <>
