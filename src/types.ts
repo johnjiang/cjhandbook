@@ -33,4 +33,17 @@ export enum AnimalType {
     FISH = "FISH",
     BUG = "BUG",
     FOSSIL = "FOSSIL",
+    ART = "ART",
+}
+
+export interface Art {
+    id: number;
+    name: string;
+    originalName: string;
+    artist: string;
+    year: string;
+    fakes?: {
+        variation: string;
+        reason: string;
+    }[];
 }

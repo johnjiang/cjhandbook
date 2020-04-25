@@ -6,11 +6,11 @@ import isEmpty from "lodash/isEmpty";
 import "antd/es/date-picker/style/css";
 
 import fishData from "../../../data/json/fish.json";
-import insectData from "../../../data/json/insects.json";
+import insectData from "../../../data/json/bugs.json";
 import AnimalTable, { Hemisphere, isAnimalAvailable } from "./animal-table";
 import useLocalStorage from "../../helpers/use-local-storage";
 import HideUnavailableToggle from "./hide-unavailable-toggle";
-import CaughtFishToggle from "./caught-fish-toggle";
+import CaughtAnimalToggle from "./caught-animal-toggle";
 import SearchInput from "./search-input";
 import AnimalCards from "./animal-cards";
 import { MEDIA_QUERY } from "../../helpers/media";
@@ -145,7 +145,7 @@ export default function FishGuide(): ReactElement {
                                     }
                                 />
 
-                                <CaughtFishToggle
+                                <CaughtAnimalToggle
                                     checked={hideCaughtAnimals}
                                     onChange={(val): void =>
                                         setHideCaughtAnimals(val)

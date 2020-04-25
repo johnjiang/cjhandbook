@@ -12,8 +12,8 @@ export default function HeaderMenu(): ReactElement {
                     {"CJ's Handbook"}
                 </Menu.Item>
                 <Menu.Item>
-                    <Link to="/about" />
-                    About
+                    <Link to="/art" />
+                    {"Redd's Manual"}
                 </Menu.Item>
                 <Menu.Item>
                     <a

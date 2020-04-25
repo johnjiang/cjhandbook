@@ -5,6 +5,7 @@ import Media from "react-media";
 import "antd/dist/antd.css";
 
 import FishGuide from "./pages/animal-guide";
+import ArtGuide from "./pages/art-guide";
 import HeaderMenu from "./pages/menu";
 import styled from "styled-components";
 import AboutPage from "./pages/about";
@@ -15,8 +16,11 @@ const { Content, Footer, Header } = Layout;
 
 const ContentContainer = styled.div`
     background: #fff;
-    padding: 24px;
-    min-height: 800px;
+    padding: 20px;
+
+    @media (max-width: 599px) {
+        padding: 10px;
+    }
 `;
 
 export default function App(): ReactElement {
@@ -44,6 +48,9 @@ export default function App(): ReactElement {
                                         <Switch>
                                             <Route exact path="/">
                                                 <FishGuide />
+                                            </Route>
+                                            <Route exact path="/art">
+                                                <ArtGuide />
                                             </Route>
                                             <Route exact path="/about">
                                                 <AboutPage />

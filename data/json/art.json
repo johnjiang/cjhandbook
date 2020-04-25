@@ -1,0 +1,465 @@
+[
+    {
+        "id": 0,
+        "name": "Academic Painting",
+        "originalName": "Vitruvian Man",
+        "year": "c. 1490",
+        "artist": "Leonardo Da Vinci",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Coffee stain top right"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Amazing Painting",
+        "originalName": "The Shooting Company of Frans Banning Cocq and Willem van Ruytenburch (Commonly known as The Night Watch)",
+        "year": "1642",
+        "artist": "Rembrandt van Rijn",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one does not have hat on middle figure"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ancient Statue",
+        "originalName": "Shak\u014dki-dog\u016b",
+        "year": "1000-400 BC",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake has two antennae coming out of the side of its head"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Basic Painting",
+        "originalName": "The Blue Boy",
+        "year": "c. 1770",
+        "artist": "Thomas Gainsborough",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake painting has forehead completely covered in hair"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Beautiful Statue",
+        "originalName": "Venus de Milo",
+        "year": "130-100 BC",
+        "artist": "Alexandros of Antioch",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake is wearing a necklace"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Calm Painting",
+        "originalName": "A Sunday Afternoon on the Island of La Grande Jatte",
+        "year": "1884",
+        "artist": "Georges Seurat"
+    },
+    {
+        "id": 6,
+        "name": "Common Painting",
+        "originalName": "The Gleaners",
+        "year": "1857",
+        "artist": "Jean-Fran\u00e7ois Millet"
+    },
+    {
+        "id": 7,
+        "name": "Detailed Painting",
+        "originalName": "Hydrangeas with fowl",
+        "year": "c. 1700",
+        "artist": "Ito  Jakuchu",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one has purple plants in background instead of blue"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Dynamic Painting",
+        "originalName": "The Great Wave off Kanagawa",
+        "year": "c. 1829-1833",
+        "artist": "Katsushika Hokusai"
+    },
+    {
+        "id": 9,
+        "name": "Familiar Statue",
+        "originalName": "The Thinker",
+        "year": "1880",
+        "artist": "Augste Rodin"
+    },
+    {
+        "id": 10,
+        "name": "Famous Painting",
+        "originalName": "Mona Lisa",
+        "year": "c. 1503-1506",
+        "artist": "Leonardo Da Vinci",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Eyebrows in fake are aggressively arched"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Flowery Painting",
+        "originalName": "Sunflowers",
+        "year": "1888",
+        "artist": "Vincent Van Gogh"
+    },
+    {
+        "id": 12,
+        "name": "Gallant Statue",
+        "originalName": "David",
+        "year": "c. 1501-1504",
+        "artist": "Michelangelo",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake is holding a book"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Glowing Painting",
+        "originalName": "The Fighting Temeraire",
+        "year": "1838",
+        "artist": "Joseph Mallord William Turner"
+    },
+    {
+        "id": 14,
+        "name": "Graceful Painting",
+        "originalName": "Beauty Looking Back",
+        "year": "c. 1600",
+        "artist": "Hishikawa Moronobu",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one features a larger version of the woman"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Great Statue",
+        "originalName": "Kamehameha I",
+        "year": "1883",
+        "artist": "Thomas Ridgeway Gould"
+    },
+    {
+        "id": 16,
+        "name": "Informative Statue",
+        "originalName": "Rosetta Stone",
+        "year": "196 BC",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake is blue, not black"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Jolly Painting",
+        "originalName": "Summer",
+        "year": "1963",
+        "artist": "Guiseppe Arcimboldo",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Real has plant sprouting from chest"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Moody Painting",
+        "originalName": "The Sower",
+        "year": "1850",
+        "artist": "Jean-Francois Millet"
+    },
+    {
+        "id": 19,
+        "name": "Motherly Statue",
+        "originalName": "Capitoline Wolf",
+        "year": "1021-1153",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake has a tongue hanging out"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Moving Painting",
+        "originalName": "The birth of Venus",
+        "year": "1484-1486",
+        "artist": "Sandro Botticelli",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one lacking trees in far right"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Mysterious Painting",
+        "originalName": "Isle of the Dead",
+        "year": "1883",
+        "artist": "Arnold Bocklin"
+    },
+    {
+        "id": 22,
+        "name": "Mystic Statue",
+        "originalName": "Bust of Nefertiti",
+        "year": "1345 BC",
+        "artist": "Thutmose",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake has an earring in right ear"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Nice Painting",
+        "originalName": "The Fifer",
+        "year": "1866",
+        "artist": "Edouard Manet"
+    },
+    {
+        "id": 24,
+        "name": "Perfect Painting",
+        "originalName": "Apples and Oranges",
+        "year": "c. 1900",
+        "artist": "Paul Cezanne"
+    },
+    {
+        "id": 25,
+        "name": "Proper Painting",
+        "originalName": "A Bar at the Folies-Bergere",
+        "year": "1882",
+        "artist": "Edouard Manet"
+    },
+    {
+        "id": 26,
+        "name": "Quaint Painting",
+        "originalName": "The Milkmaid",
+        "year": "1657-1658",
+        "artist": "Johannes Vermeer",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Real painting has far less liquid pouring out of the pitcher"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Robust Statue",
+        "originalName": "Discobolus",
+        "year": "460-450 BC",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one is wearing a watch on the raised arm"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Rock-head Statue",
+        "originalName": "Olmec Collossal Head",
+        "year": "900 BC",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one is smiling"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Scary Painting",
+        "originalName": "Otani Oniji III In the Role of the Servant Edobei",
+        "year": "1794",
+        "artist": "Toshusai Sharaku",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Real painting eyebrows tilted towards the nose"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Scenic Painting",
+        "originalName": "The Hunters Snow",
+        "year": "1565",
+        "artist": "Pieter Bruegel The Elder",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Real one has two men walking in the snow and more animals"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Serene Painting",
+        "originalName": "Lady with an Ermine",
+        "year": "1489-1490",
+        "artist": "Leonardo Da Vinci",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake painting has dark fur and a mask pattern on the stoat the woman is holding"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Sinking Painting",
+        "originalName": "Ophelia",
+        "year": "1851-1852",
+        "artist": "John Everett Millais"
+    },
+    {
+        "id": 33,
+        "name": "Solemn Painting",
+        "originalName": "Las Meninas",
+        "year": "c. 1656",
+        "artist": "Diego Velazquez",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Real painting has a different orientation for the arm of the man at the doorway"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Tremendous Statue",
+        "originalName": "Houmuwu ding",
+        "year": "1300-1046 BC",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake has a lid"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Twinkling Painting",
+        "originalName": "The Starry Night",
+        "year": "1889",
+        "artist": "Vincent Van Gogh"
+    },
+    {
+        "id": 36,
+        "name": "Valiant Statue",
+        "originalName": "Nike of Samothrace",
+        "year": "c. 200-190",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake statue has the left leg forward instead of the right"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Warm Painting",
+        "originalName": "The Clothed Maja",
+        "year": "1800-1805",
+        "artist": "Francisco De Goya"
+    },
+    {
+        "id": 38,
+        "name": "Warrior Statue",
+        "originalName": "Terracotta Warrior",
+        "year": "245-228 BCE",
+        "artist": "Unknown",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake one is holding a spade"
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Wild Painting Left Half",
+        "originalName": "Wind God and Thunder God",
+        "year": "c. 1700",
+        "artist": "Ogata Korin",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake on has inverted colours. God on the left should be white and god on the right should be green."
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Wild Painting Right Half",
+        "originalName": "Wind God and Thunder God",
+        "year": "c. 1700",
+        "artist": "Ogata Korin",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Fake on has inverted colours. God on the left should be white and god on the right should be green."
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Wistful Painting",
+        "originalName": "Girl with a Pearl Earring",
+        "year": "c. 1665",
+        "artist": "Johannes Vermeer",
+        "fakes": [
+            {
+                "variation": "",
+                "reason": "Real version girl is wearing a pearl earring"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Worthy Painting",
+        "originalName": "Liberty Leading the People",
+        "year": "1830",
+        "artist": "Eugene Delacroix"
+    }
+]

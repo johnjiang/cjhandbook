@@ -17,7 +17,6 @@ interface Props {
     hemisphere: Hemisphere;
     caughtFish: Record<string, boolean>;
     onCaughtFishChange: (fishName: string, isCaught: boolean) => void;
-    searchFilter?: string;
 }
 
 function isFish(animal: Animal): animal is Fish {
@@ -35,27 +34,15 @@ export default function AnimalCards({
         <div>
             {animals.map(
                 (animal): ReactElement => {
+                    const type = animalType.toLowerCase();
+
                     return (
                         <CardContainer key={animal.name}>
                             <Card
                                 title={
                                     <span>
-                                        <StarAnimal
-                                            animal={animal}
-                                            isCaught={Boolean(
-                                                caughtFish[animal.name],
-                                            )}
-                                            onClick={(isChecked): void => {
-                                                onCaughtFishChange(
-                                                    animal.name,
-                                                    isChecked,
-                                                );
-                                            }}
-                                        />{" "}
                                         <img
-                                            src={`/images/${animalType.toLowerCase()}-${
-                                                animal.id
-                                            }.png`}
+                                            src={`/images/${type}/${type}-${animal.id}.png`}
                                             alt={animal.name}
                                             loading="lazy"
                                         />
@@ -69,6 +56,21 @@ export default function AnimalCards({
                                     />
                                 }
                                 style={{ width: "100%" }}
+                                actions={[
+                                    <StarAnimal
+                                        key="star"
+                                        animal={animal}
+                                        isCaught={Boolean(
+                                            caughtFish[animal.name],
+                                        )}
+                                        onClick={(isChecked): void => {
+                                            onCaughtFishChange(
+                                                animal.name,
+                                                isChecked,
+                                            );
+                                        }}
+                                    />,
+                                ]}
                             >
                                 <p>Location: {animal.location}</p>
                                 {isFish(animal) && <p>Size: {animal.size}</p>}

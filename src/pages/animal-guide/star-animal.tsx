@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { StarTwoTone } from "@ant-design/icons";
+import { CheckCircleTwoTone } from "@ant-design/icons";
 import { message } from "antd";
 import { Animal } from "../../types";
 
@@ -28,9 +28,15 @@ export default function StarAnimal({
     return (
         <span onClick={onStarClicked}>
             {isCaught ? (
-                <StarTwoTone twoToneColor="#d4b106" />
+                <CheckCircleTwoTone
+                    twoToneColor="#52c41a"
+                    style={{ fontSize: "24px" }}
+                />
             ) : (
-                <StarTwoTone twoToneColor="#bfbfbf" />
+                <CheckCircleTwoTone
+                    twoToneColor="#bfbfbf"
+                    style={{ fontSize: "24px" }}
+                />
             )}
         </span>
     );

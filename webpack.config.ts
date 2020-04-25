@@ -6,7 +6,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any,no-unused-vars
 module.exports = (env: any, argv: any): any => {
     return {
         entry: {
@@ -44,7 +44,6 @@ module.exports = (env: any, argv: any): any => {
             ]),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, "src", "index.html"),
-                // favicon: path.resolve(__dirname, "public", "favicon.ico"),
             }),
             new MiniCssExtractPlugin({
                 filename: "compiled_css.css",
@@ -52,7 +51,8 @@ module.exports = (env: any, argv: any): any => {
         ],
         devtool: "source-map",
         devServer: {
-            contentBase: "./dist",
+            contentBase: path.join(__dirname, "dist"),
+            compress: true,
             historyApiFallback: true,
             overlay: true,
         },

@@ -1,0 +1,43 @@
+Academic Painting	✅	Vitruvian Man	c. 1490	Leonardo Da Vinci	Coffee stain top right
+Amazing Painting	✅	The Shooting Company of Frans Banning Cocq and Willem van Ruytenburch (Commonly known as The Night Watch)	1642	Rembrandt van Rijn	Fake one does not have hat on middle figure
+Ancient Statue	✅	Shakōki-dogū	1000-400 BC	Unknown	Fake has two antennae coming out of the side of its head
+Basic Painting	✅	The Blue Boy	c. 1770	Thomas Gainsborough	Fake painting has forehead completely covered in hair
+Beautiful Statue	✅	Venus de Milo	130-100 BC	Alexandros of Antioch	Fake is wearing a necklace
+Calm Painting	❌	A Sunday Afternoon on the Island of La Grande Jatte	1884	Georges Seurat	-
+Common Painting	❌	The Gleaners	1857	Jean-François Millet	-
+Detailed Painting	✅	Hydrangeas with fowl	c. 1700	Ito  Jakuchu	Fake one has purple plants in background instead of blue
+Dynamic Painting	❌	The Great Wave off Kanagawa	c. 1829-1833	Katsushika Hokusai	-
+Familiar Statue	❌	The Thinker	1880	Augste Rodin	-
+Famous Painting	✅	Mona Lisa	c. 1503-1506	Leonardo Da Vinci	Eyebrows in fake are aggressively arched
+Flowery Painting	❌	Sunflowers	1888	Vincent Van Gogh	-
+Gallant Statue	✅	David	c. 1501-1504	Michelangelo	Fake is holding a book
+Glowing Painting	❌	The Fighting Temeraire	1838	Joseph Mallord William Turner	-
+Graceful Painting	✅	Beauty Looking Back	c. 1600	Hishikawa Moronobu	Fake one features a larger version of the woman
+Great Statue	❌	Kamehameha I	1883	Thomas Ridgeway Gould	-
+Informative Statue	✅	Rosetta Stone	196 BC	Unknown	Fake is blue, not black
+Jolly Painting	✅	Summer	1963	Guiseppe Arcimboldo	Real has plant sprouting from chest
+Moody Painting	❌	The Sower	1850	Jean-Francois Millet	-
+Motherly Statue	✅	Capitoline Wolf	1021-1153	Unknown	Fake has a tongue hanging out
+Moving Painting	✅	The birth of Venus	1484-1486	Sandro Botticelli	Fake one lacking trees in far right
+Mysterious Painting	❌	Isle of the Dead	1883	Arnold Bocklin	-
+Mystic Statue	✅	Bust of Nefertiti	1345 BC	Thutmose	Fake has an earring in right ear
+Nice Painting	❌	The Fifer	1866	Edouard Manet	-
+Perfect Painting	❌	Apples and Oranges	c. 1900	Paul Cezanne	-
+Proper Painting	❌	A Bar at the Folies-Bergere	1882	Edouard Manet	-
+Quaint Painting	✅	The Milkmaid	1657-1658	Johannes Vermeer	Real painting has far less liquid pouring out of the pitcher
+Robust Statue	✅	Discobolus	460-450 BC	Unknown	Fake one is wearing a watch on the raised arm
+Rock-head Statue	✅	Olmec Collossal Head	900 BC	Unknown	Fake one is smiling
+Scary Painting	✅	Otani Oniji III In the Role of the Servant Edobei	1794	Toshusai Sharaku	Real painting eyebrows tilted towards the nose
+Scenic Painting	✅	The Hunters Snow	1565	Pieter Bruegel The Elder	Real one has two men walking in the snow and more animals
+Serene Painting	✅	Lady with an Ermine	1489-1490	Leonardo Da Vinci	Fake painting has dark fur and a mask pattern on the stoat the woman is holding
+Sinking Painting	❌	Ophelia	1851-1852	John Everett Millais	-
+Solemn Painting	✅	Las Meninas	c. 1656	Diego Velazquez	Real painting has a different orientation for the arm of the man at the doorway
+Tremendous Statue	✅	Houmuwu ding	1300-1046 BC	Unknown	Fake has a lid
+Twinkling Painting	❌	The Starry Night	1889	Vincent Van Gogh	-
+Valiant Statue	✅	Nike of Samothrace	c. 200-190	Unknown	Fake statue has the left leg forward instead of the right
+Warm Painting	❌	The Clothed Maja	1800-1805	Francisco De Goya	-
+Warrior Statue	✅	Terracotta Warrior	245-228 BCE	Unknown	Fake one is holding a spade
+Wild Painting Left Half	✅	Wind God and Thunder God	c. 1700	Ogata Korin	Fake on has inverted colours. God on the left should be white and god on the right should be green.
+Wild Painting Right Half	✅	Wind God and Thunder God	c. 1700	Ogata Korin	Fake on has inverted colours. God on the left should be white and god on the right should be green.
+Wistful Painting	✅	Girl with a Pearl Earring	c. 1665	Johannes Vermeer	Real version girl is wearing a pearl earring
+Worthy Painting	❌	Liberty Leading the People	1830	Eugene Delacroix	-

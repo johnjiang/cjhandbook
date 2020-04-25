@@ -110,6 +110,8 @@ export default function AnimalTable({
                 key="caught"
                 align="center"
                 render={(name: string, record: Fish): ReactElement => {
+                    const type = animalType.toLowerCase();
+
                     return (
                         <Space>
                             <Checkbox
@@ -120,9 +122,7 @@ export default function AnimalTable({
                                 }}
                             />
                             <img
-                                src={`/images/${animalType.toLowerCase()}-${
-                                    record.id
-                                }.png`}
+                                src={`/images/${type}/${type}-${record.id}.png`}
                                 alt={name}
                                 loading="lazy"
                             />
@@ -149,7 +149,7 @@ export default function AnimalTable({
                     title="Size"
                     dataIndex="size"
                     filters={[
-                        { text: "Narow", value: "Narrow" },
+                        { text: "Narrow", value: "Narrow" },
                         { text: "Smallest", value: "Smallest" },
                         { text: "Small", value: "Small" },
                         { text: "Medium", value: "Medium" },
