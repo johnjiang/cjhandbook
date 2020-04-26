@@ -5,12 +5,7 @@
         "originalName": "Vitruvian Man",
         "year": "c. 1490",
         "artist": "Leonardo Da Vinci",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Coffee stain top right"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Coffee stain top right" }]
     },
     {
         "id": 1,
@@ -57,12 +52,7 @@
         "originalName": "Venus de Milo",
         "year": "130-100 BC",
         "artist": "Alexandros of Antioch",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake is wearing a necklace"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Fake is wearing a necklace" }]
     },
     {
         "id": 5,
@@ -131,12 +121,7 @@
         "originalName": "David",
         "year": "c. 1501-1504",
         "artist": "Michelangelo",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake is holding a book"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Fake is holding a book" }]
     },
     {
         "id": 13,
@@ -171,12 +156,7 @@
         "originalName": "Rosetta Stone",
         "year": "196 BC",
         "artist": "Unknown",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake is blue, not black"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Fake is blue, not black" }]
     },
     {
         "id": 17,
@@ -185,10 +165,7 @@
         "year": "1963",
         "artist": "Guiseppe Arcimboldo",
         "fakes": [
-            {
-                "variation": "",
-                "reason": "Real has plant sprouting from chest"
-            }
+            { "variation": "", "reason": "Real has plant sprouting from chest" }
         ]
     },
     {
@@ -205,10 +182,7 @@
         "year": "1021-1153",
         "artist": "Unknown",
         "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake has a tongue hanging out"
-            }
+            { "variation": "", "reason": "Fake has a tongue hanging out" }
         ]
     },
     {
@@ -218,10 +192,7 @@
         "year": "1484-1486",
         "artist": "Sandro Botticelli",
         "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake one lacking trees in far right"
-            }
+            { "variation": "", "reason": "Fake one lacking trees in far right" }
         ]
     },
     {
@@ -238,10 +209,7 @@
         "year": "1345 BC",
         "artist": "Thutmose",
         "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake has an earring in right ear"
-            }
+            { "variation": "", "reason": "Fake has an earring in right ear" }
         ]
     },
     {
@@ -274,7 +242,7 @@
         "fakes": [
             {
                 "variation": "",
-                "reason": "Real painting has far less liquid pouring out of the pitcher"
+                "reason": "Fake painting has more liquid pouring out of the pitcher"
             }
         ]
     },
@@ -297,12 +265,7 @@
         "originalName": "Olmec Collossal Head",
         "year": "900 BC",
         "artist": "Unknown",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake one is smiling"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Fake one is smiling" }]
     },
     {
         "id": 29,
@@ -313,7 +276,7 @@
         "fakes": [
             {
                 "variation": "",
-                "reason": "Real painting eyebrows tilted towards the nose"
+                "reason": "Fake painting has eyebrows tilted away from the nose"
             }
         ]
     },
@@ -326,7 +289,7 @@
         "fakes": [
             {
                 "variation": "",
-                "reason": "Real one has two men walking in the snow and more animals"
+                "reason": "Fake painting only has one man and less animals"
             }
         ]
     },
@@ -359,7 +322,7 @@
         "fakes": [
             {
                 "variation": "",
-                "reason": "Real painting has a different orientation for the arm of the man at the doorway"
+                "reason": "Fake painting has a man at the door with a different arm orientation"
             }
         ]
     },
@@ -369,12 +332,7 @@
         "originalName": "Houmuwu ding",
         "year": "1300-1046 BC",
         "artist": "Unknown",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake has a lid"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Fake has a lid" }]
     },
     {
         "id": 35,
@@ -409,12 +367,7 @@
         "originalName": "Terracotta Warrior",
         "year": "245-228 BCE",
         "artist": "Unknown",
-        "fakes": [
-            {
-                "variation": "",
-                "reason": "Fake one is holding a spade"
-            }
-        ]
+        "fakes": [{ "variation": "", "reason": "Fake one is holding a spade" }]
     },
     {
         "id": 39,
@@ -451,7 +404,7 @@
         "fakes": [
             {
                 "variation": "",
-                "reason": "Real version girl is wearing a pearl earring"
+                "reason": "Fake painting has a girl not wearing a pearl earing."
             }
         ]
     },

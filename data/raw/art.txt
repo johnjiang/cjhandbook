@@ -24,14 +24,14 @@ Mystic Statue	✅	Bust of Nefertiti	1345 BC	Thutmose	Fake has an earring in righ
 Nice Painting	❌	The Fifer	1866	Edouard Manet	-
 Perfect Painting	❌	Apples and Oranges	c. 1900	Paul Cezanne	-
 Proper Painting	❌	A Bar at the Folies-Bergere	1882	Edouard Manet	-
-Quaint Painting	✅	The Milkmaid	1657-1658	Johannes Vermeer	Real painting has far less liquid pouring out of the pitcher
+Quaint Painting	✅	The Milkmaid	1657-1658	Johannes Vermeer	Fake painting has more liquid pouring out of the pitcher
 Robust Statue	✅	Discobolus	460-450 BC	Unknown	Fake one is wearing a watch on the raised arm
 Rock-head Statue	✅	Olmec Collossal Head	900 BC	Unknown	Fake one is smiling
-Scary Painting	✅	Otani Oniji III In the Role of the Servant Edobei	1794	Toshusai Sharaku	Real painting eyebrows tilted towards the nose
-Scenic Painting	✅	The Hunters Snow	1565	Pieter Bruegel The Elder	Real one has two men walking in the snow and more animals
+Scary Painting	✅	Otani Oniji III In the Role of the Servant Edobei	1794	Toshusai Sharaku	Fake painting has eyebrows tilted away from the nose
+Scenic Painting	✅	The Hunters Snow	1565	Pieter Bruegel The Elder	Fake painting only has one man and less animals
 Serene Painting	✅	Lady with an Ermine	1489-1490	Leonardo Da Vinci	Fake painting has dark fur and a mask pattern on the stoat the woman is holding
 Sinking Painting	❌	Ophelia	1851-1852	John Everett Millais	-
-Solemn Painting	✅	Las Meninas	c. 1656	Diego Velazquez	Real painting has a different orientation for the arm of the man at the doorway
+Solemn Painting	✅	Las Meninas	c. 1656	Diego Velazquez	Fake painting has a man at the door with a different arm orientation
 Tremendous Statue	✅	Houmuwu ding	1300-1046 BC	Unknown	Fake has a lid
 Twinkling Painting	❌	The Starry Night	1889	Vincent Van Gogh	-
 Valiant Statue	✅	Nike of Samothrace	c. 200-190	Unknown	Fake statue has the left leg forward instead of the right
@@ -39,5 +39,5 @@ Warm Painting	❌	The Clothed Maja	1800-1805	Francisco De Goya	-
 Warrior Statue	✅	Terracotta Warrior	245-228 BCE	Unknown	Fake one is holding a spade
 Wild Painting Left Half	✅	Wind God and Thunder God	c. 1700	Ogata Korin	Fake on has inverted colours. God on the left should be white and god on the right should be green.
 Wild Painting Right Half	✅	Wind God and Thunder God	c. 1700	Ogata Korin	Fake on has inverted colours. God on the left should be white and god on the right should be green.
-Wistful Painting	✅	Girl with a Pearl Earring	c. 1665	Johannes Vermeer	Real version girl is wearing a pearl earring
+Wistful Painting	✅	Girl with a Pearl Earring	c. 1665	Johannes Vermeer	Fake painting has a girl not wearing a pearl earing.
 Worthy Painting	❌	Liberty Leading the People	1830	Eugene Delacroix	-
