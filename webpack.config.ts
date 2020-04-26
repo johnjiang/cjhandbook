@@ -25,8 +25,12 @@ module.exports = (env: any, argv: any): any => {
                     use: { loader: "awesome-typescript-loader" },
                 },
                 {
-                    test: /\.(css|scss)$/,
-                    use: [MiniCssExtractPlugin.loader, "css-loader"],
+                    test: /\.(css|scss|less)$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        "css-loader",
+                        "less-loader",
+                    ],
                 },
             ],
         },
