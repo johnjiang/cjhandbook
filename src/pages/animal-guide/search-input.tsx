@@ -18,6 +18,7 @@ export default function SearchInput({ query, onChange }: Props): ReactElement {
             prefix={<SearchOutlined />}
             placeholder="Search..."
             onChange={onFilterEventChange}
+            allowClear
         />
     );
 }
