@@ -26,20 +26,23 @@ export default function HeaderMenu(): ReactElement {
         });
     }, [history]);
 
+    const activeKeys = [history.location.pathname];
+
     return (
         <Media query={MEDIA_QUERY}>
             {(isMobile): ReactElement => {
                 const menu = (
                     <Menu
+                        selectedKeys={activeKeys}
                         mode={isMobile ? "inline" : "horizontal"}
                         theme={isMobile ? "light" : "dark"}
                         style={{ lineHeight: "64px" }}
                     >
-                        <Menu.Item>
+                        <Menu.Item key="/">
                             <Link to="/" />
                             {"CJ's Handbook"}
                         </Menu.Item>
-                        <Menu.Item>
+                        <Menu.Item key="/art">
                             <Link to="/art" />
                             {"Redd's Manual"}
                         </Menu.Item>
