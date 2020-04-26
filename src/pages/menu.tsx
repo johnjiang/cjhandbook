@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 const MobileHeader = styled.div`
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +103,7 @@ export default function HeaderMenu(): ReactElement {
                                     <UnorderedListOutlined
                                         style={{
                                             color: "#fff",
-                                            fontSize: "18px",
+                                            fontSize: "20px",
                                         }}
                                         onClick={(): void =>
                                             setMenuVisible(true)
