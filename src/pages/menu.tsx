@@ -5,7 +5,7 @@ import { ExportOutlined, UnorderedListOutlined } from "@ant-design/icons";
 import Media from "react-media";
 
 import { MEDIA_QUERY } from "../helpers/media";
-import "../css/popover.less";
+import "../assets/css/popover.less";
 import styled from "styled-components";
 
 const MobileHeader = styled.div`
