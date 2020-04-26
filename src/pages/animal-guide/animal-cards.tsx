@@ -1,8 +1,12 @@
 import React, { ReactElement } from "react";
-import { Card } from "antd";
+import { Card, Descriptions } from "antd";
 import styled from "styled-components";
 
-import { Hemisphere } from "./animal-table";
+import {
+    Hemisphere,
+    MonthRangeDescription,
+    TimeRangeDescription,
+} from "./animal-table";
 import AnimalStatusTag from "./animal-status-tag";
 import StarAnimal from "./star-animal";
 import { Animal, AnimalType, Fish } from "../../types";
@@ -39,6 +43,7 @@ export default function AnimalCards({
                     return (
                         <CardContainer key={animal.name}>
                             <Card
+                                size="small"
                                 title={
                                     <span>
                                         <img
@@ -47,6 +52,9 @@ export default function AnimalCards({
                                             loading="lazy"
                                         />
                                         {animal.name}
+                                        {isFish(animal) && (
+                                            <span> ({animal.size})</span>
+                                        )}
                                     </span>
                                 }
                                 extra={
@@ -72,9 +80,25 @@ export default function AnimalCards({
                                     />,
                                 ]}
                             >
-                                <p>Location: {animal.location}</p>
-                                {isFish(animal) && <p>Size: {animal.size}</p>}
-                                <p>Price: {animal.price}</p>
+                                <Descriptions size="small" bordered column={2}>
+                                    <Descriptions.Item label="Location">
+                                        {animal.location}
+                                    </Descriptions.Item>
+                                    <Descriptions.Item label="Price">
+                                        {animal.price}
+                                    </Descriptions.Item>
+                                    <Descriptions.Item label="Time" span={2}>
+                                        <TimeRangeDescription
+                                            ranges={animal.time}
+                                        />
+                                    </Descriptions.Item>
+                                    <Descriptions.Item label="Month" span={2}>
+                                        <MonthRangeDescription
+                                            ranges={animal.month}
+                                            hemisphere={hemisphere}
+                                        />
+                                    </Descriptions.Item>
+                                </Descriptions>
                             </Card>
                         </CardContainer>
                     );

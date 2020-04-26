@@ -1,12 +1,6 @@
-export interface MonthRange {
-    start: number;
-    end: number;
-}
+export type MonthRange = number[];
 
-export interface TimeRange {
-    start: number;
-    end: number;
-}
+export type TimeRange = number[];
 
 export type Animal = Fish | Bug;
 

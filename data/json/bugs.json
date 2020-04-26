@@ -4,18 +4,18 @@
         "name": "Common Butterfly",
         "location": "Flying",
         "price": 160,
-        "time": [{ "start": 4, "end": 19 }],
-        "month": [{ "start": 8, "end": 5 }]
+        "time": [[4, 19]],
+        "month": [[8, 5]]
     },
     {
         "id": 1,
         "name": "Yellow Butterfly",
         "location": "Flying",
         "price": 160,
-        "time": [{ "start": 4, "end": 19 }],
+        "time": [[4, 19]],
         "month": [
-            { "start": 2, "end": 5 },
-            { "start": 8, "end": 9 }
+            [2, 5],
+            [8, 9]
         ]
     },
     {
@@ -23,58 +23,58 @@
         "name": "Tiger Butterfly",
         "location": "Flying",
         "price": 240,
-        "time": [{ "start": 4, "end": 19 }],
-        "month": [{ "start": 2, "end": 8 }]
+        "time": [[4, 19]],
+        "month": [[2, 8]]
     },
     {
         "id": 3,
         "name": "Peacock Butterfly",
         "location": "Flying by hybrid flowers",
         "price": 2500,
-        "time": [{ "start": 4, "end": 19 }],
-        "month": [{ "start": 2, "end": 5 }]
+        "time": [[4, 19]],
+        "month": [[2, 5]]
     },
     {
         "id": 4,
         "name": "Common Bluebottle",
         "location": "Flying",
         "price": 300,
-        "time": [{ "start": 4, "end": 19 }],
-        "month": [{ "start": 3, "end": 7 }]
+        "time": [[4, 19]],
+        "month": [[3, 7]]
     },
     {
         "id": 5,
         "name": "Paper Kite Butterfly",
         "location": "Flying",
         "price": 1000,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 0, "end": 11 }]
+        "time": [[8, 19]],
+        "month": [[0, 11]]
     },
     {
         "id": 6,
         "name": "Great Purple Emperor",
         "location": "Flying",
         "price": 3000,
-        "time": [{ "start": 4, "end": 19 }],
-        "month": [{ "start": 4, "end": 7 }]
+        "time": [[4, 19]],
+        "month": [[4, 7]]
     },
     {
         "id": 7,
         "name": "Monach Butterfly",
         "location": "Flying",
         "price": 140,
-        "time": [{ "start": 4, "end": 17 }],
-        "month": [{ "start": 8, "end": 10 }]
+        "time": [[4, 17]],
+        "month": [[8, 10]]
     },
     {
         "id": 8,
         "name": "Emperor Butterfly",
         "location": "Flying",
         "price": 4000,
-        "time": [{ "start": 17, "end": 8 }],
+        "time": [[17, 8]],
         "month": [
-            { "start": 5, "end": 8 },
-            { "start": 11, "end": 2 }
+            [5, 8],
+            [11, 2]
         ]
     },
     {
@@ -82,18 +82,18 @@
         "name": "Agrias Butterfly",
         "location": "Flying",
         "price": 3000,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 3, "end": 8 }]
+        "time": [[8, 17]],
+        "month": [[3, 8]]
     },
     {
         "id": 10,
         "name": "Raja Brooke's Birdwing",
         "location": "Flying by purple flowers",
         "price": 2500,
-        "time": [{ "start": 8, "end": 17 }],
+        "time": [[8, 17]],
         "month": [
-            { "start": 3, "end": 8 },
-            { "start": 11, "end": 1 }
+            [3, 8],
+            [11, 1]
         ]
     },
     {
@@ -101,104 +101,104 @@
         "name": "Queen Alexandra's Birdwing",
         "location": "Flying",
         "price": 4000,
-        "time": [{ "start": 8, "end": 16 }],
-        "month": [{ "start": 4, "end": 8 }]
+        "time": [[8, 16]],
+        "month": [[4, 8]]
     },
     {
         "id": 12,
         "name": "Moth",
         "location": "Flying by light",
         "price": 130,
-        "time": [{ "start": 19, "end": 4 }],
-        "month": [{ "start": 0, "end": 11 }]
+        "time": [[19, 4]],
+        "month": [[0, 11]]
     },
     {
         "id": 13,
         "name": "Atlas Moth",
         "location": "On trees",
         "price": 3000,
-        "time": [{ "start": 19, "end": 4 }],
-        "month": [{ "start": 3, "end": 8 }]
+        "time": [[19, 4]],
+        "month": [[3, 8]]
     },
     {
         "id": 14,
         "name": "Madagascan Sunset Moth",
         "location": "Flying",
         "price": 2500,
-        "time": [{ "start": 8, "end": 16 }],
-        "month": [{ "start": 3, "end": 8 }]
+        "time": [[8, 16]],
+        "month": [[3, 8]]
     },
     {
         "id": 15,
         "name": "Long Locust",
         "location": "On ground",
         "price": 200,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 3, "end": 10 }]
+        "time": [[8, 19]],
+        "month": [[3, 10]]
     },
     {
         "id": 16,
         "name": "Migratory Locust",
         "location": "On ground",
         "price": 600,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 7, "end": 10 }]
+        "time": [[8, 19]],
+        "month": [[7, 10]]
     },
     {
         "id": 17,
         "name": "Rice Grasshopper",
         "location": "On ground",
         "price": 160,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 7, "end": 10 }]
+        "time": [[8, 19]],
+        "month": [[7, 10]]
     },
     {
         "id": 18,
         "name": "Grasshopper",
         "location": "On ground",
         "price": 160,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 6, "end": 8 }]
+        "time": [[8, 17]],
+        "month": [[6, 8]]
     },
     {
         "id": 19,
         "name": "Cricket",
         "location": "Dig at cricket noise",
         "price": 130,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 8, "end": 10 }]
+        "time": [[17, 8]],
+        "month": [[8, 10]]
     },
     {
         "id": 20,
         "name": "Bell Cricket",
         "location": "On ground",
         "price": 430,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 8, "end": 9 }]
+        "time": [[17, 8]],
+        "month": [[8, 9]]
     },
     {
         "id": 21,
         "name": "Mantis",
         "location": "On flowers",
         "price": 430,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 2, "end": 10 }]
+        "time": [[8, 17]],
+        "month": [[2, 10]]
     },
     {
         "id": 22,
         "name": "Orchid Mantis",
         "location": "On white flowers",
         "price": 2400,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 2, "end": 10 }]
+        "time": [[8, 17]],
+        "month": [[2, 10]]
     },
     {
         "id": 23,
         "name": "Honeybee",
         "location": "Flying",
         "price": 200,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 2, "end": 6 }]
+        "time": [[8, 17]],
+        "month": [[2, 6]]
     },
     {
         "id": 24,
@@ -206,39 +206,39 @@
         "location": "Falls from shaking trees",
         "price": 2500,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 25,
         "name": "Brown Cicada",
         "location": "On trees",
         "price": 250,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[8, 17]],
+        "month": [[6, 7]]
     },
     {
         "id": 26,
         "name": "Robust Cicada",
         "location": "On trees",
         "price": 300,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[8, 17]],
+        "month": [[6, 7]]
     },
     {
         "id": 27,
         "name": "Giant Cicada",
         "location": "On trees",
         "price": 600,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[8, 17]],
+        "month": [[6, 7]]
     },
     {
         "id": 28,
         "name": "Walker Cicada",
         "location": "On trees",
         "price": 400,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 7, "end": 8 }]
+        "time": [[8, 17]],
+        "month": [[7, 8]]
     },
     {
         "id": 29,
@@ -246,10 +246,10 @@
         "location": "On trees",
         "price": 660,
         "time": [
-            { "start": 4, "end": 8 },
-            { "start": 16, "end": 19 }
+            [4, 8],
+            [16, 19]
         ],
-        "month": [{ "start": 6, "end": 7 }]
+        "month": [[6, 7]]
     },
     {
         "id": 30,
@@ -257,31 +257,31 @@
         "location": "On trees",
         "price": 10,
         "time": null,
-        "month": [{ "start": 6, "end": 7 }]
+        "month": [[6, 7]]
     },
     {
         "id": 31,
         "name": "Red Dragonfly",
         "location": "Flying",
         "price": 180,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 8, "end": 9 }]
+        "time": [[8, 19]],
+        "month": [[8, 9]]
     },
     {
         "id": 32,
         "name": "Darner Dragonfly",
         "location": "Flying",
         "price": 230,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 3, "end": 9 }]
+        "time": [[8, 17]],
+        "month": [[3, 9]]
     },
     {
         "id": 33,
         "name": "Banded Dragonfly",
         "location": "Flying",
         "price": 4500,
-        "time": [{ "start": 8, "end": 17 }],
-        "month": [{ "start": 4, "end": 9 }]
+        "time": [[8, 17]],
+        "month": [[4, 9]]
     },
     {
         "id": 34,
@@ -289,15 +289,15 @@
         "location": "Flying",
         "price": 500,
         "time": null,
-        "month": [{ "start": 10, "end": 1 }]
+        "month": [[10, 1]]
     },
     {
         "id": 35,
         "name": "Firefly",
         "location": "Flying",
         "price": 300,
-        "time": [{ "start": 19, "end": 4 }],
-        "month": [{ "start": 5, "end": 5 }]
+        "time": [[19, 4]],
+        "month": [[5, 5]]
     },
     {
         "id": 36,
@@ -305,31 +305,31 @@
         "location": "Underground",
         "price": 500,
         "time": null,
-        "month": [{ "start": 10, "end": 4 }]
+        "month": [[10, 4]]
     },
     {
         "id": 37,
         "name": "Pondskater",
         "location": "Ponds",
         "price": 130,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 4, "end": 8 }]
+        "time": [[8, 19]],
+        "month": [[4, 8]]
     },
     {
         "id": 38,
         "name": "Diving Beetle",
         "location": "Ponds and rivers",
         "price": 800,
-        "time": [{ "start": 8, "end": 19 }],
-        "month": [{ "start": 4, "end": 8 }]
+        "time": [[8, 19]],
+        "month": [[4, 8]]
     },
     {
         "id": 39,
         "name": "Giant Water Bug",
         "location": "Ponds and rivers",
         "price": 2000,
-        "time": [{ "start": 19, "end": 8 }],
-        "month": [{ "start": 3, "end": 8 }]
+        "time": [[19, 8]],
+        "month": [[3, 8]]
     },
     {
         "id": 40,
@@ -337,25 +337,25 @@
         "location": "On flowers",
         "price": 120,
         "time": null,
-        "month": [{ "start": 2, "end": 10 }]
+        "month": [[2, 10]]
     },
     {
         "id": 41,
         "name": "Man-faced Stink Bug",
         "location": "On flowers",
         "price": 1000,
-        "time": [{ "start": 19, "end": 8 }],
-        "month": [{ "start": 2, "end": 10 }]
+        "time": [[19, 8]],
+        "month": [[2, 10]]
     },
     {
         "id": 42,
         "name": "Ladybug",
         "location": "On flowers",
         "price": 200,
-        "time": [{ "start": 8, "end": 17 }],
+        "time": [[8, 17]],
         "month": [
-            { "start": 2, "end": 5 },
-            { "start": 9, "end": 9 }
+            [2, 5],
+            [9, 9]
         ]
     },
     {
@@ -364,7 +364,7 @@
         "location": "On ground",
         "price": 1500,
         "time": null,
-        "month": [{ "start": 1, "end": 10 }]
+        "month": [[1, 10]]
     },
     {
         "id": 44,
@@ -372,7 +372,7 @@
         "location": "On tree stumps",
         "price": 2400,
         "time": null,
-        "month": [{ "start": 3, "end": 7 }]
+        "month": [[3, 7]]
     },
     {
         "id": 45,
@@ -381,8 +381,8 @@
         "price": 450,
         "time": null,
         "month": [
-            { "start": 4, "end": 5 },
-            { "start": 8, "end": 10 }
+            [4, 5],
+            [8, 10]
         ]
     },
     {
@@ -391,7 +391,7 @@
         "location": "On tree stumps",
         "price": 350,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 47,
@@ -399,7 +399,7 @@
         "location": "On tree stumps",
         "price": 3000,
         "time": null,
-        "month": [{ "start": 4, "end": 8 }]
+        "month": [[4, 8]]
     },
     {
         "id": 48,
@@ -407,15 +407,15 @@
         "location": "On palm trees",
         "price": 800,
         "time": null,
-        "month": [{ "start": 6, "end": 7 }]
+        "month": [[6, 7]]
     },
     {
         "id": 49,
         "name": "Dung Beetle",
         "location": "Pushing snowballs",
         "price": 3000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 11, "end": 1 }]
+        "time": [[17, 8]],
+        "month": [[11, 1]]
     },
     {
         "id": 50,
@@ -423,15 +423,15 @@
         "location": "On ground",
         "price": 300,
         "time": null,
-        "month": [{ "start": 6, "end": 8 }]
+        "month": [[6, 8]]
     },
     {
         "id": 51,
         "name": "Scarab Beetle",
         "location": "On trees",
         "price": 10000,
-        "time": [{ "start": 23, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[23, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 52,
@@ -439,15 +439,15 @@
         "location": "On trees",
         "price": 200,
         "time": null,
-        "month": [{ "start": 5, "end": 7 }]
+        "month": [[5, 7]]
     },
     {
         "id": 53,
         "name": "Goliath Beetle",
         "location": "On coconut trees",
         "price": 8000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 5, "end": 8 }]
+        "time": [[17, 8]],
+        "month": [[5, 8]]
     },
     {
         "id": 54,
@@ -455,7 +455,7 @@
         "location": "On trees",
         "price": 2000,
         "time": null,
-        "month": [{ "start": 6, "end": 7 }]
+        "month": [[6, 7]]
     },
     {
         "id": 55,
@@ -463,79 +463,79 @@
         "location": "On trees",
         "price": 1000,
         "time": null,
-        "month": [{ "start": 6, "end": 7 }]
+        "month": [[6, 7]]
     },
     {
         "id": 56,
         "name": "Giant Stag",
         "location": "On trees",
         "price": 10000,
-        "time": [{ "start": 23, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[23, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 57,
         "name": "Rainbow Stag",
         "location": "On trees",
         "price": 6000,
-        "time": [{ "start": 19, "end": 8 }],
-        "month": [{ "start": 5, "end": 8 }]
+        "time": [[19, 8]],
+        "month": [[5, 8]]
     },
     {
         "id": 58,
         "name": "Cyclommatus Stag",
         "location": "On trees",
         "price": 8000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 59,
         "name": "Golden Stag",
         "location": "On trees",
         "price": 12000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 60,
         "name": "Giraffe Stag",
         "location": "On trees",
         "price": 12000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 61,
         "name": "Horned Dynastid",
         "location": "On trees",
         "price": 1350,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 62,
         "name": "Horned Atlas",
         "location": "On trees",
         "price": 8000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 63,
         "name": "Horned Elephant",
         "location": "On trees",
         "price": 8000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 64,
         "name": "Horned Herucles",
         "location": "On trees",
         "price": 12000,
-        "time": [{ "start": 17, "end": 8 }],
-        "month": [{ "start": 6, "end": 7 }]
+        "time": [[17, 8]],
+        "month": [[6, 7]]
     },
     {
         "id": 65,
@@ -543,10 +543,10 @@
         "location": "On trees",
         "price": 600,
         "time": [
-            { "start": 4, "end": 8 },
-            { "start": 17, "end": 19 }
+            [4, 8],
+            [17, 19]
         ],
-        "month": [{ "start": 6, "end": 10 }]
+        "month": [[6, 10]]
     },
     {
         "id": 66,
@@ -554,7 +554,7 @@
         "location": "Near trees, disguised as furniture leaf",
         "price": 600,
         "time": null,
-        "month": [{ "start": 6, "end": 7 }]
+        "month": [[6, 7]]
     },
     {
         "id": 67,
@@ -562,7 +562,7 @@
         "location": "Falls from shaking trees",
         "price": 600,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 68,
@@ -570,15 +570,15 @@
         "location": "On rotten food",
         "price": 80,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 69,
         "name": "Hermit Crab",
         "location": "Beach",
         "price": 1000,
-        "time": [{ "start": 19, "end": 8 }],
-        "month": [{ "start": 0, "end": 11 }]
+        "time": [[19, 8]],
+        "month": [[0, 11]]
     },
     {
         "id": 70,
@@ -586,7 +586,7 @@
         "location": "On rocks at beach",
         "price": 200,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 71,
@@ -594,15 +594,15 @@
         "location": "On trash items",
         "price": 60,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 72,
         "name": "Mosquito",
         "location": "Flying",
         "price": 130,
-        "time": [{ "start": 17, "end": 4 }],
-        "month": [{ "start": 5, "end": 8 }]
+        "time": [[17, 4]],
+        "month": [[5, 8]]
     },
     {
         "id": 73,
@@ -610,7 +610,7 @@
         "location": "On villagers",
         "price": 70,
         "time": null,
-        "month": [{ "start": 3, "end": 10 }]
+        "month": [[3, 10]]
     },
     {
         "id": 74,
@@ -618,46 +618,46 @@
         "location": "On rocks (raining)",
         "price": 250,
         "time": null,
-        "month": [{ "start": 0, "end": 11 }]
+        "month": [[0, 11]]
     },
     {
         "id": 75,
         "name": "Pill Bug",
         "location": "Hit rocks",
         "price": 250,
-        "time": [{ "start": 23, "end": 16 }],
-        "month": [{ "start": 8, "end": 5 }]
+        "time": [[23, 16]],
+        "month": [[8, 5]]
     },
     {
         "id": 76,
         "name": "Centipede",
         "location": "Hit rocks",
         "price": 300,
-        "time": [{ "start": 16, "end": 23 }],
-        "month": [{ "start": 8, "end": 5 }]
+        "time": [[16, 23]],
+        "month": [[8, 5]]
     },
     {
         "id": 77,
         "name": "Spider",
         "location": "Falls from shaking trees",
         "price": 480,
-        "time": [{ "start": 19, "end": 8 }],
-        "month": [{ "start": 0, "end": 11 }]
+        "time": [[19, 8]],
+        "month": [[0, 11]]
     },
     {
         "id": 78,
         "name": "Tarantula",
         "location": "On ground",
         "price": 8000,
-        "time": [{ "start": 19, "end": 4 }],
-        "month": [{ "start": 10, "end": 3 }]
+        "time": [[19, 4]],
+        "month": [[10, 3]]
     },
     {
         "id": 79,
         "name": "Scorpion",
         "location": "On ground",
         "price": 8000,
-        "time": [{ "start": 19, "end": 4 }],
-        "month": [{ "start": 4, "end": 9 }]
+        "time": [[19, 4]],
+        "month": [[4, 9]]
     }
 ]

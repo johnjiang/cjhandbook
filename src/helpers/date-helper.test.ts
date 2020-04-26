@@ -14,7 +14,7 @@ describe("date-helper", () => {
             ${twoAm}    | ${23} | ${3}  | ${false}
             ${ninePM}   | ${21} | ${4}  | ${true}
         `("returns expected", ({ time, start, end, expected }) => {
-            expect(isInTimeRange(time, { start, end })).toBe(expected);
+            expect(isInTimeRange(time, [start, end])).toBe(expected);
         });
     });
 
@@ -31,7 +31,7 @@ describe("date-helper", () => {
             ${december} | ${4}  | ${9}  | ${false}
             ${december} | ${10} | ${3}  | ${true}
         `("returns expected", ({ time, start, end, expected }) => {
-            expect(isInMonthRange(time, { start, end })).toBe(expected);
+            expect(isInMonthRange(time, [start, end])).toBe(expected);
         });
     });
 });

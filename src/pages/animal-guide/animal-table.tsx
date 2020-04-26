@@ -14,18 +14,18 @@ export enum Hemisphere {
 }
 
 const MONTHS = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
     "May",
     "June",
     "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec.",
 ];
 
 function hoursToString(hours: number): string {
@@ -36,6 +36,67 @@ function hoursToString(hours: number): string {
     } else {
         return `${hours - 12}pm`;
     }
+}
+
+export function TimeRangeDescription({
+    ranges,
+}: {
+    ranges: TimeRange[] | null;
+}): ReactElement {
+    if (!ranges) {
+        return <span>All day</span>;
+    }
+
+    return (
+        <RangeContainer>
+            {ranges.map(
+                (range, index): ReactElement => {
+                    const [start, end] = range;
+                    return (
+                        <span key={index}>
+                            {hoursToString(start)} - {hoursToString(end)}
+                        </span>
+                    );
+                },
+            )}
+        </RangeContainer>
+    );
+}
+
+export function MonthRangeDescription({
+    ranges,
+    hemisphere,
+}: {
+    ranges: MonthRange[] | null;
+    hemisphere: Hemisphere;
+}): ReactElement {
+    if (!ranges) {
+        return <span>Year-round</span>;
+    }
+
+    return (
+        <RangeContainer>
+            {ranges.map(
+                (range, index): ReactElement => {
+                    let [start, end] = range;
+
+                    if (
+                        hemisphere === Hemisphere.SOUTHERN &&
+                        !(start === 0 && end === 11)
+                    ) {
+                        start = (start + 6) % 12;
+                        end = (end + 6) % 12;
+                    }
+
+                    return (
+                        <span key={index}>
+                            {MONTHS[start]} - {MONTHS[end]}
+                        </span>
+                    );
+                },
+            )}
+        </RangeContainer>
+    );
 }
 
 const RangeContainer = styled.div`
@@ -57,15 +118,11 @@ export function isAnimalAvailable(
         }
     }
 
-    let monthIntervals;
-    if (hemisphere === Hemisphere.NORTHEN) {
-        monthIntervals = data.month;
-    } else {
+    let monthIntervals = data.month;
+    if (hemisphere === Hemisphere.SOUTHERN) {
         monthIntervals = data.month.map((interval) => {
-            return {
-                start: (interval.start + 6) % 12,
-                end: (interval.end + 6) % 12,
-            };
+            const [start, end] = interval;
+            return [(start + 6) % 12, (end + 6) % 12];
         });
     }
 
@@ -150,11 +207,12 @@ export default function AnimalTable({
                     dataIndex="size"
                     filters={[
                         { text: "Narrow", value: "Narrow" },
-                        { text: "Smallest", value: "Smallest" },
-                        { text: "Small", value: "Small" },
-                        { text: "Medium", value: "Medium" },
-                        { text: "Large", value: "Large" },
-                        { text: "X-Large", value: "X Large" },
+                        { text: "XS", value: "XS" },
+                        { text: "S", value: "S" },
+                        { text: "M", value: "M" },
+                        { text: "L", value: "L" },
+                        { text: "XL", value: "XL" },
+                        { text: "XXL", value: "XXL" },
                     ]}
                     onFilter={(value, record: Fish): boolean =>
                         record.size === value
@@ -177,24 +235,7 @@ export default function AnimalTable({
                 render={(
                     ranges: TimeRange[] | null,
                 ): ReactElement | ReactElement[] => {
-                    if (!ranges) {
-                        return <span>All day</span>;
-                    }
-
-                    return (
-                        <RangeContainer>
-                            {ranges.map(
-                                (range, index): ReactElement => {
-                                    return (
-                                        <span key={index}>
-                                            {hoursToString(range.start)} -{" "}
-                                            {hoursToString(range.end)}
-                                        </span>
-                                    );
-                                },
-                            )}
-                        </RangeContainer>
-                    );
+                    return <TimeRangeDescription ranges={ranges} />;
                 }}
             />
             <Column
@@ -203,32 +244,11 @@ export default function AnimalTable({
                 render={(
                     ranges: MonthRange[] | null,
                 ): ReactElement | ReactElement[] => {
-                    if (!ranges) {
-                        return <span>Year-round</span>;
-                    }
-
                     return (
-                        <RangeContainer>
-                            {ranges.map(
-                                (range, index): ReactElement => {
-                                    let { start, end } = range;
-
-                                    if (
-                                        hemisphere === Hemisphere.SOUTHERN &&
-                                        !(start === 0 && end === 11)
-                                    ) {
-                                        start = (start + 6) % 12;
-                                        end = (end + 6) % 12;
-                                    }
-
-                                    return (
-                                        <span key={index}>
-                                            {MONTHS[start]} - {MONTHS[end]}
-                                        </span>
-                                    );
-                                },
-                            )}
-                        </RangeContainer>
+                        <MonthRangeDescription
+                            ranges={ranges}
+                            hemisphere={hemisphere}
+                        />
                     );
                 }}
             />
