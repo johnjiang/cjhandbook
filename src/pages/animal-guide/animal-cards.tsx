@@ -12,7 +12,7 @@ import StarAnimal from "./star-animal";
 import { Animal, AnimalType, Fish } from "../../types";
 
 const CardContainer = styled.div`
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 `;
 
 interface Props {
