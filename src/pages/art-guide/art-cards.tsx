@@ -24,8 +24,20 @@ const Image = styled.img`
 
 const CardGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+
+    @media (max-width: 1800px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 interface Props {
@@ -45,7 +57,9 @@ Props): ReactElement {
         <CardGrid>
             {arts.map(
                 (art): ReactElement => {
-                    const artUrlName = art.name.toLowerCase().replace(" ", "-");
+                    const artUrlName = art.name
+                        .toLowerCase()
+                        .replace(/\s/g, "-");
                     const realFileName = `${artUrlName}-real.png`;
                     const fakeFilename = `${artUrlName}-fake.png`;
                     const isStatue = art.name.includes("Statue");
@@ -80,10 +94,21 @@ Props): ReactElement {
                                 title={<span>{art.name}</span>}
                                 style={{
                                     height: "100%",
-                                    maxWidth: "400px",
                                 }}
+                                cover={
+                                    !art.fakes &&
+                                    (isStatue ? (
+                                        <Skeleton />
+                                    ) : (
+                                        <Image
+                                            src={`/images/art/${realFileName}`}
+                                            alt={art.name}
+                                            loading="lazy"
+                                        />
+                                    ))
+                                }
                             >
-                                {art.fakes ? (
+                                {art.fakes && (
                                     <ArtGroup>
                                         {realCard}
 
@@ -110,8 +135,6 @@ Props): ReactElement {
                                             {art.fakes[0].reason}
                                         </Card>
                                     </ArtGroup>
-                                ) : (
-                                    realCard
                                 )}
 
                                 <Meta
