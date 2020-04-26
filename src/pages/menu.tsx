@@ -16,6 +16,12 @@ const MobileHeader = styled.div`
     justify-content: center;
 `;
 
+enum Links {
+    ROOT = "/",
+    ART = "/art",
+    ABOUT = "/about",
+}
+
 export default function HeaderMenu(): ReactElement {
     const [isMenuVisible, setMenuVisible] = useState(false);
     const history = useHistory();
@@ -38,13 +44,17 @@ export default function HeaderMenu(): ReactElement {
                         theme={isMobile ? "light" : "dark"}
                         style={{ lineHeight: "64px" }}
                     >
-                        <Menu.Item key="/">
-                            <Link to="/" />
+                        <Menu.Item key={Links.ROOT}>
+                            <Link to={Links.ROOT} />
                             {"CJ's Handbook"}
                         </Menu.Item>
-                        <Menu.Item key="/art">
-                            <Link to="/art" />
+                        <Menu.Item key={Links.ART}>
+                            <Link to={Links.ART} />
                             {"Redd's Manual"}
+                        </Menu.Item>
+                        <Menu.Item key={Links.ABOUT}>
+                            <Link to={Links.ABOUT} />
+                            About
                         </Menu.Item>
                         <Menu.Item>
                             <a
