@@ -1,13 +1,39 @@
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
+// @ts-ignore
+import ExtractCssChunks from "extract-css-chunks-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
+import webpack from "webpack";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any,no-unused-vars
+import Optimization = webpack.Options.Optimization;
+
+const WEBPACK_MODES = {
+    development: "development",
+    production: "production",
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 module.exports = (env: any, argv: any): any => {
+    const mode = argv.mode || WEBPACK_MODES.development;
+    const isProd = mode === WEBPACK_MODES.production;
+
+    const optimization: Optimization = {
+        // splitChunks: {
+        //     chunks: "all",
+        // },
+    };
+
+    if (isProd) {
+        optimization.minimize = true;
+        optimization.minimizer = [
+            new TerserPlugin({}),
+            new OptimizeCSSAssetsPlugin({}),
+        ];
+    }
+
     return {
         entry: {
             app: "./src/index.tsx",
@@ -27,7 +53,13 @@ module.exports = (env: any, argv: any): any => {
                 {
                     test: /\.(css|scss|less)$/,
                     use: [
-                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: ExtractCssChunks.loader,
+                            options: {
+                                hmr: !isProd,
+                                reloadAll: true,
+                            },
+                        },
                         "css-loader",
                         "less-loader",
                     ],
@@ -49,9 +81,7 @@ module.exports = (env: any, argv: any): any => {
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, "src", "index.html"),
             }),
-            new MiniCssExtractPlugin({
-                filename: "compiled_css.css",
-            }),
+            new ExtractCssChunks(),
         ],
         devtool: "source-map",
         devServer: {
@@ -60,12 +90,6 @@ module.exports = (env: any, argv: any): any => {
             historyApiFallback: true,
             overlay: true,
         },
-        optimization: {
-            splitChunks: {
-                chunks: "all",
-            },
-            minimize: true,
-            minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
-        },
+        optimization,
     };
 };
