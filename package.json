@@ -71,7 +71,7 @@
         "analyze": "TS_NODE_PROJECT=tsconfig.webpack.json webpack --profile --json | tail -n +5 > stats.json && webpack-bundle-analyzer stats.json dist",
         "start": "TS_NODE_PROJECT=tsconfig.webpack.json webpack-dev-server --hot --open",
         "build": "TS_NODE_PROJECT=tsconfig.webpack.json webpack --mode=production",
-        "test": "jest",
+        "test": "jest --collect-coverage",
         "lint": "eslint --ext .ts,.tsx src/"
     },
     "proxy": "http://localhost:8000"
