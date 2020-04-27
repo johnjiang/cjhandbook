@@ -1,9 +1,11 @@
-const babelOptions = {
-    presets: [
-        "@babel/preset-react",
-        "babel-preset-gatsby",
-        "@babel/preset-typescript",
-    ],
+module.exports = {
+    bail: true,
+    verbose: true,
+    transform: {
+        "^.+\\.(j|t)sx?$": "ts-jest",
+    },
+    setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+    globals: {
+        VERSION: "FAKE_VERSION",
+    },
 };
-
-module.exports = require("babel-jest").createTransformer(babelOptions);

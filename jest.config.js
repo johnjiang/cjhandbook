@@ -4,8 +4,4 @@ module.exports = {
     transform: {
         "^.+\\.(j|t)sx?$": "ts-jest",
     },
-    setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
-    globals: {
-        VERSION: "FAKE_VERSION",
-    },
 };
