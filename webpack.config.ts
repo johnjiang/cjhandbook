@@ -21,9 +21,9 @@ module.exports = (env: any, argv: any): any => {
     const isProd = mode === WEBPACK_MODES.production;
 
     const optimization: Optimization = {
-        // splitChunks: {
-        //     chunks: "all",
-        // },
+        splitChunks: {
+            chunks: "all",
+        },
     };
 
     if (isProd) {
