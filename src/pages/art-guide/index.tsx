@@ -48,7 +48,7 @@ function filterArt(
 }
 
 export default function ArtGuide(): ReactElement {
-    const [hideOwned, setHideOwned] = useLocalStorage("hideOwned", false);
+    const [hideOwned] = useLocalStorage("hideOwned", false);
     const [searchFilter, setSearchFilter] = useLocalStorage("artSearch", "");
 
     const defaultOwnedArt: Record<string, boolean> = {};
@@ -83,11 +83,6 @@ export default function ArtGuide(): ReactElement {
                                         onChange={setSearchFilter}
                                     />
                                 </SearchContainer>
-
-                                {/*<OwnedArtToggle*/}
-                                {/*    checked={hideOwned}*/}
-                                {/*    onChange={(val): void => setHideOwned(val)}*/}
-                                {/*/>*/}
                             </Space>
                         );
                     }}
