@@ -1,6 +1,8 @@
-# Woodpecker (Cleaning out the bugs from your logs)
+# CJ's Handbook
 
 ![Node.js CI](https://github.com/johnjiang/animal-crossing-guide/workflows/Node.js%20CI/badge.svg)
+
+http://cjhandbook.guide/
 
 # Developer setup
 

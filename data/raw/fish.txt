@@ -36,7 +36,7 @@ Nibble Fish	River	S	1,500	9 a.m. - 4 p.m.	May-September (Northern) / November-Ma
 Angelfish	River	S	3,000	4 p.m. - 9 a.m.	May-October (Northern) / November-April (Southern)
 Betta	River	S	2,500	9 a.m. - 4 p.m.	May-October (Northern) / November-April (Southern)
 Neon Tetra	River	XS	500	9 a.m. - 4 p.m.	April-November (Northern) / October-May (Southern)
-Rainbowfish	River	S	800	9 a.m. - 4 p.m.	May-October (Northern) / November-April (Southern)
+Rainbowfish	River	XS	800	9 a.m. - 4 p.m.	May-October (Northern) / November-April (Southern)
 Piranha	River	S	2,500	9 a.m. - 4 p.m., 9 p.m. - 4 a.m.	June-September (Northern) / December-March (Southern)
 Arowana	River	L	10,000	4 p.m. - 9 a.m.	June-September (Northern) / December-March (Southern)
 Dorado	River	XL	15,000	4 a.m. - 9 p.m.	June-September (Northern) / December-March (Southern)

@@ -5,7 +5,7 @@
     "dependencies": {
         "@ant-design/icons": "^4.1.0",
         "@types/react-router-dom": "^5.1.5",
-        "antd": "^4.1.5",
+        "antd": "^4.2.0",
         "date-fns": "^2.11.1",
         "lodash": "^4.17.15",
         "lz-string": "^1.4.4",
@@ -44,11 +44,11 @@
         "eslint-plugin-react": "^7.19.0",
         "eslint-plugin-react-hooks": "^3.0.0",
         "extract-css-chunks-webpack-plugin": "^4.7.4",
-        "html-webpack-plugin": "^4.0.4",
+        "html-webpack-plugin": "^4.2.1",
         "husky": "^4.2.0",
-        "jest": "^25.4.0",
+        "jest": "^25.5.2",
         "less-loader": "^6.0.0",
-        "lint-staged": "^10.1.7",
+        "lint-staged": "^10.2.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "prettier": "^2.0.5",
         "terser-webpack-plugin": "^2.3.6",
@@ -69,7 +69,7 @@
     },
     "scripts": {
         "analyze": "TS_NODE_PROJECT=tsconfig.webpack.json webpack --profile --json | tail -n +5 > stats.json && webpack-bundle-analyzer stats.json dist",
-        "start": "TS_NODE_PROJECT=tsconfig.webpack.json webpack-dev-server --hot --open",
+        "start": "TS_NODE_PROJECT=tsconfig.webpack.json webpack-dev-server --hot --progress --open",
         "build": "TS_NODE_PROJECT=tsconfig.webpack.json webpack --mode=production",
         "test": "jest --collect-coverage",
         "lint": "eslint --ext .ts,.tsx src/"
