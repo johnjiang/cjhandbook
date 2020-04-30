@@ -38,4 +38,4 @@ npm run lint
 
 ## 🚀 Building and deploy
 
-Automatically built on netlify
+Automatically built via GitHub actions and deployed on netlify
