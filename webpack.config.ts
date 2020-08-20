@@ -1,6 +1,7 @@
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
-import CopyWebpackPlugin from "copy-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import ExtractCssChunks from "extract-css-chunks-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -72,12 +73,14 @@ module.exports = (env: any, argv: any): any => {
         },
         plugins: [
             new CleanWebpackPlugin(),
-            new CopyWebpackPlugin([
-                {
-                    from: "public",
-                    to: ".",
-                },
-            ]),
+            new CopyPlugin({
+                patterns: [
+                    {
+                        from: "public",
+                        to: ".",
+                    },
+                ],
+            }),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, "src", "index.html"),
             }),
